@@ -1,0 +1,58 @@
+html{
+	background:#eee;
+}
+
+.splash-text h1, .splash-text h3, .splash-text h4, .splash-text h5, .splash-text h6{
+	padding:10px;
+	background: white;
+	text-transform: uppercase;
+}
+.splash-text h1 { font-weight: 100; }
+.splash-text h3 { font-weight: 300; }
+.splash-text h4 { font-weight: 200; }
+.splash-text h5 { font-weight: 200; }
+
+h2{
+	border: 5px solid;
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 2em;
+	padding:10px;
+	text-align: center;
+}
+
+.section{
+	padding:10px;
+}
+
+img.map{
+	border: 10px solid #8bc34a;
+}
+
+/*nospacing*/
+
+.nospacing th, .nospacing td{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
+/*basestable*/
+
+table.basestable th{
+	text-align:right;
+	vertical-align: top;
+	color: #4caf50;
+}
+
+/*scheduletable*/
+table.scheduletable{
+	table-layout: fixed;
+}
+table.scheduletable th{
+	text-align: right;
+	vertical-align: top;
+}
+table.scheduletable td{
+	text-align: center;
+	border: 1px solid grey;
+}
