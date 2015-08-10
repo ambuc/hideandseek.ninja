@@ -1,5 +1,5 @@
 html{
-	background:#eee;
+	background-color: white;
 }
 
 .splash-text h1, .splash-text h3, .splash-text h4, .splash-text h5, .splash-text h6{
@@ -25,6 +25,10 @@ h2{
 	padding:10px;
 }
 
+p.flow-text{
+	margin-top:0px;
+}
+
 img.map{
 	border: 10px solid #8bc34a;
 }
@@ -34,6 +38,11 @@ img.map{
 .nospacing th, .nospacing td{
 	padding-top:0px;
 	padding-bottom:0px;
+	vertical-align: top;
+}
+
+.fixedtable{
+	table-layout: fixed;
 }
 
 /*basestable*/
@@ -45,14 +54,18 @@ table.basestable th{
 }
 
 /*scheduletable*/
-table.scheduletable{
-	table-layout: fixed;
-}
 table.scheduletable th{
 	text-align: right;
-	vertical-align: top;
+}
+table.scheduletable span{
+	color: #2196f3;
 }
 table.scheduletable td{
-	text-align: center;
-	border: 1px solid grey;
+	text-align: left;
+	/*border: 1px solid grey;*/
+}
+
+.vertical-text {
+	transform: rotate(-90deg);
+	transform-origin: left top 0;
 }

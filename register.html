@@ -1,0 +1,88 @@
+<!-- file:///Users/jamesbuckland/Documents/github/hideandseek.ninja/index.html
+file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hide and Seek</title>
+
+	<!-- meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+	<!-- Josefin Sans -->
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css" />
+
+</head>
+<body>
+
+	<div class="navbar-fixed">
+		<nav class='white'>
+			<div class="nav-wrapper container">
+				<a href="/index.html" class="brand-logo center grey-text">Hide and Seek</a>
+				<a href="/index.html" class="blue-text button-collapse"><i class="material-icons">home</i></a>
+				<a href="/index.html" class="blue-text hide-on-med-and-down"><i class="material-icons">home</i></a>
+			</div>
+		</nav>
+	</div>
+
+
+	<div class='container'>
+		<h2 class='green-text green lighten-4'>Register</h2>
+		<p class='flow-text'>Once registered, we'll email you your 
+			<b>secret code</b>, <b>team assignment</b>, and <b>home base location</b>.
+			You will also recieve more information in the days leading up to the event. Stay tuned!
+		</p>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col s12 m6">
+			          <i class="material-icons prefix">face</i>
+						<input id="first_name" type="text" class="validate">
+						<label for="first_name">First Name</label>
+					</div>
+					<div class="input-field col s12 m6">
+			          <i class="material-icons prefix">nature_people</i>
+						<input id="last_name" type="text" class="validate">
+						<label for="last_name">Last Name</label>
+					</div>
+					<div class="input-field col s12 m6">
+			          <i class="material-icons prefix">email</i>
+						<input id="email" type="email" class="validate">
+						<label for="email" data-error="??" >Email</label>
+					</div>
+					<div class="input-field col s12 m6">
+			          <i class="material-icons prefix">home</i>
+						<input id="home" type="text" class="validate">
+						<label for="home">Where are you from?</label>
+					</div>
+					<div class='input-field col s12'>
+						<input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+				    	<label for="filled-in-box">By registering, you agree to our Terms and Conditions. Basically, 1) <b>Don't break any laws</b>, and 2) <b>Don't bother anybody</b>. You're responsible for yourself in public, and we assume no risk for your well-being.</label>
+					</div>
+					<div class='input-field col s12 center-align'>
+				    	<br/>
+						<a class='btn btn-large green white-text'>sign me up</a>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+<script src="stockholm.js"></script>
+<script src="register.js"></script>
+
+</html>
