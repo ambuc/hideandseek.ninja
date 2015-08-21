@@ -28,14 +28,23 @@ $(document).ready(function(){
 	Parse.initialize("oDrVT97pILfNP3PtXnzSwZD0vsgScEGdLmR0ZtBO", "d7fE3uszRBHCai7pLgSmuxEntLaUbIvNG5RKuruA");
 
 	$('#sign-me-up').click(function(){
-		if(!validateEmail($('#email').val())){
+		if( !validateEmail( $('#email').val() ) ){
 			alert("Please enter a valid email address.");
 			return;
-		} else {
-			makeData();
-		}
+		} 
+		var query = new Parse.Query(Parse.Object.extend("Player"));
+		query.equalTo("email", escapeHtml($('#email').val()));
+		query.find({
+		  	success: function(results) {
+		  		if(results.length>0){
+		  			// alert('A user already exists with this email.');
+		  			deny(results);
+		  			return;
+		  		}		  			
+				makeData();
+		  	}
+		});
 	});
-
 });
 
 
@@ -54,14 +63,35 @@ function addCode(thisPlayer){
 
 			thisPlayer.set('secret_code', secret_code);
 			thisPlayer.save();
+			fireEmail(thisPlayer);
 	  	}
 	});
 }
 
-
+function fireEmail(thisPlayer){
+	var params = { 
+		'email' : thisPlayer.get('email'),
+		'first' : thisPlayer.get('first'),
+		'last' : thisPlayer.get('last'),
+		'team' : thisPlayer.get('team'),
+		'home_base' : thisPlayer.get('home_base'),
+		'secret_code' : thisPlayer.get('secret_code'),
+		'when' : data.when,
+		'city' : data.where.city,
+		'event_link' : data.event_link
+	};
+	Parse.Cloud.run('fireEmail', params, {
+		success: function(msg) {
+			console.log(msg);
+		// ratings should be 4.5
+		},
+		error: function(error) {
+			console.log(error);
+		}
+	});
+}
 
 function makeData(){
-
 	var thisPlayer = new Player({
 		'first' : capitalizeFirstLetter(escapeHtml($('#first_name').val())),
 		'last' : capitalizeFirstLetter(escapeHtml($('#last_name').val())),
@@ -70,7 +100,6 @@ function makeData(){
 		'home_base' : Math.floor(Math.random() * data.zones.count) + 1,
 		'team' : (Math.random()>0.5)?'A':'B'
 	});
-
 
 	console.log(thisPlayer);
 
@@ -87,14 +116,27 @@ function makeData(){
 
 }
 
+function deny(results){
+	$('#sign-up-row').addClass('hide');
+	$('#deny-row').removeClass('hide');
+	$('#deny-row #already').addClass('animated tada');
+
+	$('#deny-row #name').text(results[0].get('first'));
+	$('#deny-row #secret_code').text(results[0].get('secret_code'));
+	$('#deny-row #email').text(results[0].get('email'));
+	$('#deny-row #team').text(results[0].get('team'));
+	$('#deny-row #home_base').append(results[0].get('home_base'));
+	$('.home-info').append('<a href="'+data.zones.array[results[0].get('home_base')].link+'">'+data.zones.array[results[0].get('home_base')].desc+'</a>')
+}
+
 function confirm(thisPlayer){
 	$('#sign-up-row').addClass('hide');
 	$('#confirm-row').removeClass('hide');
-	$('#confirm-row').addClass('animated tada');
-	// $('#secret_code').text('a');
-	$('#name').text(thisPlayer.get('first'));
-	$('#team').text(thisPlayer.get('team'));
-	$('#home_base').append(thisPlayer.get('home_base'));
+	$('#confirm-row').addClass('animated pulse');
+
+	$('#confirm-row #name').text(thisPlayer.get('first'));
+	$('#confirm-row #team').text(thisPlayer.get('team'));
+	$('#confirm-row #home_base').append(thisPlayer.get('home_base'));
 }
 
 function validateEmail(email) {

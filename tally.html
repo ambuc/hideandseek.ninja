@@ -1,0 +1,101 @@
+<!-- file:///Users/jamesbuckland/Documents/github/hideandseek.ninja/index.html
+file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hide and Seek</title>
+
+	<!-- meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+	<!-- Josefin Sans -->
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css" />
+
+	<style>
+	</style>
+
+</head>
+<body>
+
+	<div class='container'>
+		<div class="row">
+			<div class='col s12'>
+				<h2 class='green-text green lighten-4'>Tally your points</h2>
+				<p class='flow-text'> Enter the <b>secret codes</b> of the people you caught hiding here. Once enough people have entered their secret codes, we'll tally points and post the winners on Facebook :) </p>
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='col s12 hide' id='error-col'>
+				<div class='row'>
+					<div class='col s1 right-align' id='verify'>
+					</div>
+					<div class='col s11' id='msg' style='padding-top:10px;'>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='row user-row'>
+			<div class='col s12 l6 input-field'>
+				<h5 class='green-text'><span>What's your </span>secret code?</h5>
+				<i class='material-icons green-text prefix'>vpn_key</i>
+				<input class='green-text' placeholder='B001' id="my_code" maxlength=4 type="text" class="validate" style='text-transform:uppercase;'>
+			</div>
+			<div class='col s12 l6 input-field'>
+				<h5 class='green-text'><span>What's your </span>home base?</h5>
+				<i class='material-icons green-text prefix'>home</i>
+				<input class='green-text' placeholder='4' id="my_base" maxlength=4 type="text" class="validate">
+			</div>
+			<div class='col s12 center-align'>
+				<br/>
+				<a class="btn btn-large green white-text" id='check'>
+					<i class='material-icons'>forward</i>
+
+				</a>
+			</div>
+		</div>
+
+		<div class='row fields-row hide'>
+			<div class='col s12 m2 right-align hide-on-small-only'>
+				<i class='material-icons green-text large'>search</i>
+			</div>
+			<div class='col s12 m10'>
+				<h5 class='green-text'>What codes did you find?</h6>
+				<span class='fields'>
+					<div class='field input-field'>
+						<input class="green-text find" placeholder="Code #1"  maxlength=4 type="text" class="validate">
+					</div>
+					<div class='field input-field'>
+						<input class="green-text find" placeholder="Code #2" maxlength=4 type="text" class="validate">
+					</div>
+				</span>
+				<a class='btn right green darken-1 white-text' id='add-fields'><i class='material-icons left'>forward</i>submit finds</a>
+				<br/>
+				<br/>
+				<br/>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+<script src="stockholm.js"></script>
+<script src="tally.js"></script>
+
+</html>
