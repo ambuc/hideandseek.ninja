@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
 	$('.splash-text').html( 
 		_.template( $( "#splash_text_template" ).html() ) ( data ) 
 	);
