@@ -29,60 +29,89 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 	<div class='container'>
 		<div class="row">
 			<div class='col s12'>
-				<h2 class='green-text green lighten-4'>Tally your points</h2>
+				<h2 class='deep-purple-text deep-purple lighten-4'>Tally your points</h2>
 				<p class='flow-text'> Enter the <b>secret codes</b> of the people you caught hiding here. Once enough people have entered their secret codes, we'll tally points and post the winners on Facebook :) </p>
 			</div>
 		</div>
 
-		<div class='row'>
-			<div class='col s12 hide' id='error-col'>
-				<div class='row'>
-					<div class='col s1 right-align' id='verify'>
-					</div>
-					<div class='col s11' id='msg' style='padding-top:10px;'>
-					</div>
-				</div>
+		<div class='row grey lighten-3 hide'  id='error-col'>
+			<div class='col s2 right-align' id='verify'>
+			</div>
+			<div class='col s10' id='msg' style='padding-top:10px;'>
 			</div>
 		</div>
 
 		<div class='row user-row'>
-			<div class='col s12 l6 input-field'>
-				<h5 class='green-text'><span>What's your </span>secret code?</h5>
-				<i class='material-icons green-text prefix'>vpn_key</i>
-				<input class='green-text' placeholder='B001' id="my_code" maxlength=4 type="text" class="validate" style='text-transform:uppercase;'>
+			<div class='col s12 m6 input-field'>
+				<h5 class=''><span>What's your </span>secret code?</h5>
+				<i class='material-icons grey-text prefix'>vpn_key</i>
+				<input class='' placeholder='B001' id="my_code" maxlength=4 type="text" class="validate" style='text-transform:uppercase; font-size:x-large;'>
 			</div>
-			<div class='col s12 l6 input-field'>
-				<h5 class='green-text'><span>What's your </span>home base?</h5>
-				<i class='material-icons green-text prefix'>home</i>
-				<input class='green-text' placeholder='4' id="my_base" maxlength=4 type="text" class="validate">
+			<div class='col s12 m6 input-field'>
+				<h5 class=''><span>What's your </span>home base?</h5>
+				<i class='material-icons grey-text prefix'>home</i>
+				<input class='' placeholder='4' id="my_base" maxlength=4 type="text" class="validate" style="font-size:x-large;">
 			</div>
-			<div class='col s12 center-align'>
+			<div class='col s12 right-align'>
 				<br/>
-				<a class="btn btn-large green white-text" id='check'>
-					<i class='material-icons'>forward</i>
-
+				<a class="btn btn deep-purple white-text" id='check'>
+					<i class='material-icons left'>forward</i>
+					log me in
 				</a>
 			</div>
 		</div>
 
 		<div class='row fields-row hide'>
 			<div class='col s12 m2 right-align hide-on-small-only'>
-				<i class='material-icons green-text large'>search</i>
+				<i class='material-icons grey-text large'>search</i>
 			</div>
 			<div class='col s12 m10'>
-				<h5 class='green-text'>What codes did you find?</h6>
-				<span class='fields'>
+				<h5 class=''>Enter the codes you found.</h6>
+				<div class='fields'>
 					<div class='field input-field'>
-						<input class="green-text find" placeholder="Code #1"  maxlength=4 type="text" class="validate">
+						<input class="find" placeholder="A123"  maxlength=4 type="text" class="validate" style='text-transform:uppercase; font-size:x-large;'>
 					</div>
 					<div class='field input-field'>
-						<input class="green-text find" placeholder="Code #2" maxlength=4 type="text" class="validate">
+						<input class="find" placeholder="B234" maxlength=4 type="text" class="validate" style='text-transform:uppercase; font-size:x-large;'>
 					</div>
-				</span>
-				<a class='btn right green darken-1 white-text' id='add-fields'><i class='material-icons left'>forward</i>submit finds</a>
+				</div>
+				<a class='btn right deep-purple darken-1 white-text' id='submit-fields'><i class='material-icons left'>forward</i>submit finds</a>
 				<br/>
 				<br/>
 				<br/>
+			</div>
+		</div>
+
+		<div class='row stats-row hide'>
+			<div class='col s12'>
+				<p class='flow-text'>Thanks for submitting your scores.</p>
+				<p>We recompile points every few minutes, so don't worry if your score doesn't look quite right.</p>
+				<div class='row'>
+					<div class='col s12 m4 center-align'>
+						<h5>You were found</h5>
+						<h2 class='deaths red lighten-4 red-text'></h2>
+						<h5>times.</h5>
+					</div>
+					<div class='col s12 m4 center-align'>
+						<h5>You found </h5>
+						<h2 class='kills green lighten-4 green-text'></h2>
+						<h5>people.</h5>
+					</div>
+					<div class='col s12 m4 center-align'>
+						<h5>Your score is</h5>
+						<h2 class='score blue lighten-4 blue-text'></h2>
+						<h5>points.</h5>
+					</div>
+				</div>
+				<div class='grey lighten-4' style='padding:20px;'>
+					<p class='flow-text'>How scoring works:<p>
+	                <p>Everyone starts off with 100 points, as long as they participate in some way (find or are found by at least one person).</lp>
+	                <p> Those 100 points are distributed amongst however many people find him/her, with the hider getting a share. </p>
+	                <p> For example: I am found by three people. Each of those three people get 25 points, and I also get 25 points.</p>
+	                <p> Really good hiders who are never found at all get all 100 points to themselves. But that's not enough to win -- it's also important to find people. 🏆</p>
+	                <p> Often, the scores of high-scoring players will fluctuate depending on the scores of the low-scoring players. It's quite an intricate game 😄</p>
+	                <p> Everyone is found at least once, by default. Otherwise we divide by zero and the best hiders get infinity points, which isn't fair 😜</p>
+	            </div>
 			</div>
 		</div>
 
