@@ -1,71 +1,4 @@
-<!-- file:///Users/jamesbuckland/Documents/github/hideandseek.ninja/index.html
-file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
--->
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Hide and Seek</title>
 
-	<!-- meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-
-	<!-- Josefin Sans -->
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
-
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-	<!-- css -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="index.css" />
-
-	<style>
-	</style>
-
-</head>
-<body>
-
-	<div class='container'>
-		<div class="row">
-			<div class='col s12'>
-				<h2 class='deep-purple-text deep-purple lighten-4'>Tally your points</h2>
-				<p class='flow-text'> Enter the <b>secret codes</b> of the people you caught hiding here. Once enough people have entered their secret codes, we'll tally points and post the winners on Facebook :) </p>
-			</div>
-		</div>
-
-		<div class='row grey lighten-3 hide'  id='error-col'>
-			<div class='col s2 right-align' id='verify'>
-			</div>
-			<div class='col s10' id='msg' style='padding-top:10px;'>
-			</div>
-		</div>
-
-		<div class='row user-row'>
-			<div class='col s12 m6 input-field'>
-				<h5 class=''><span>What's your </span>secret code?</h5>
-				<i class='material-icons grey-text prefix'>vpn_key</i>
-				<input class='' placeholder='B001' id="my_code" maxlength=4 type="text" class="validate" style='text-transform:uppercase; font-size:x-large;'>
-			</div>
-			<div class='col s12 m6 input-field'>
-				<h5 class=''><span>What's your </span>home base?</h5>
-				<i class='material-icons grey-text prefix'>home</i>
-				<input class='' placeholder='4' id="my_base" maxlength=4 type="text" class="validate" style="font-size:x-large;">
-			</div>
-			<div class='col s12 right-align'>
-				<br/>
-				<a class="btn btn deep-purple white-text" id='check'>
-					<i class='material-icons left'>forward</i>
-					log me in
-				</a>
-			</div>
-		</div>
-
-		<div class='row fields-row hide'>
-			<div class='col s12 m2 right-align hide-on-small-only'>
-				<i class='material-icons grey-text large'>search</i>
-			</div>
-			<div class='col s12 m10'>
 				<h5 class=''>Enter the codes you found.</h6>
 				<div class='fields'>
 					<div class='field input-field'>
@@ -77,13 +10,8 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 				<a class='btn right deep-purple darken-1 white-text' id='submit-fields'><i class='material-icons left'>forward</i>submit finds</a>
 				<br/>
-				<br/>
-				<br/>
-			</div>
-		</div>
 
-		<div class='row stats-row hide'>
-			<div class='col s12'>
+
 				<p class='flow-text'>Thanks for submitting your scores.</p>
 				<p>We recompile points every few minutes, so don't worry if your score doesn't look quite right.</p>
 				<div class='row'>
@@ -103,28 +31,3 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 						<h5>points.</h5>
 					</div>
 				</div>
-				<div class='grey lighten-4' style='padding:20px;'>
-					<p class='flow-text'>How scoring works:<p>
-	                <p>Everyone starts off with 100 points, as long as they participate in some way (find or are found by at least one person).</lp>
-	                <p> Those 100 points are distributed amongst however many people find him/her, with the hider getting a share. </p>
-	                <p> For example: I am found by three people. Each of those three people get 25 points, and I also get 25 points.</p>
-	                <p> Really good hiders who are never found at all get all 100 points to themselves. But that's not enough to win -- it's also important to find people. 🏆</p>
-	                <p> Often, the scores of high-scoring players will fluctuate depending on the scores of the low-scoring players. It's quite an intricate game 😄</p>
-	                <p> Everyone is found at least once, by default. Otherwise we divide by zero and the best hiders get infinity points, which isn't fair 😜</p>
-	            </div>
-			</div>
-		</div>
-
-	</div>
-
-</body>
-
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
-
-<script src="stockholm.js"></script>
-<script src="tally.js"></script>
-
-</html>

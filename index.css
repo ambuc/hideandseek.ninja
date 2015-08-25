@@ -87,14 +87,11 @@ table.scheduletable td{
 	/*border: 1px solid grey;*/
 }
 
-.vertical-text {
-	transform: rotate(-90deg);
-	transform-origin: left top 0;
+/* #row-tabs */
+.navbar-fixed li:hover{
+	background-color:inherit !important;
 }
-
-/*tabs*/
-/*.nav-*/
-.nav-tabs li a{
+#row-tabs li a{
 	display:inline-block !important;
 	width:90% !important;
 	height:auto !important;
@@ -102,9 +99,11 @@ table.scheduletable td{
 	text-transform: uppercase;
 	font-weight: 900;
 	text-align: center;
+	background: white;
 }
-.nav-tabs li a:hover{
+#row-tabs li a:hover{
 	box-shadow: none;
+	text-decoration: underline;
 }
 
 div.indicator{
@@ -112,25 +111,47 @@ div.indicator{
 }
 
 
+/*#row-parallax*/
+#row-parallax {
+	text-align: center;
+}
+#row-parallax .splash-text{
+	z-index: 10; 
+	margin-left:auto; 
+	margin-right:auto;	
+}
 
-/*//table//*/
+
+/*#mathtable*/
+
 table#mathtable{
 	margin:10px;
 	margin-top:-3px;
-	/*padding:10px !important;*/
-	/*background: lightgrey;*/
+	font-size:1.2em;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:300px;
 }
-table#mathtable tr {
-	vertical-align: bottom;
+table#mathtable th, table#mathtable td {
 }
 table#mathtable td {
-	padding:5px;
+	padding:0px;
+	padding-left:10px;
+	line-height:0.9em;
 }
-table#mathtable td:first-child {
-	font-size: 1.7em;
+table#mathtable th {
+	padding:0px;
+	text-align: right;
+	font-size:1.5em;
 }
 table#mathtable tr:last-child {
 	border-top:1px solid black;
+}
+
+/*scoring find*/
+.find{
+	text-transform: uppercase;
+	font-size:x-large;
 }
 
 /*footer*/

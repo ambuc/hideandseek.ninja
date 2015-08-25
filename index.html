@@ -20,31 +20,37 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="index.css" />
 	
-
 </head>
 <body>
 
-	<div class='container row'>
-		<br/>
-		<div class="col s12">
-			<ul class="row nav-tabs">
-				<li class="col s4">
-					<a class='white red-text' data-href='#section-about'> About</a>
-				</li>
-				<li class="col s4">
-					<a class='white green-text' data-href='#section-register'> Register</a>
-				</li>
-				<li class="col s4">
-					<a class='active white blue-text' data-href='#section-score'> Scoring</a>
-				</li>
-			</ul>
-		</div>
+	<div class="navbar-fixed">
+		<nav class='white'>
+			<div class="nav-wrapper container" id='container-tabs'>
+				<ul class="row" id="row-tabs">
+					<li class="col s4">
+						<a class='red-text' data-href='#section-about'>
+							About
+						</a>
+					</li>
+					<li class="col s4">
+						<a class='green-text' data-href='#section-register'>
+							Register
+						</a>
+					</li>
+					<li class="col s4">
+						<a class='active blue-text' data-href='#section-score'>
+							Scoring
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 	</div>
 
-	<div class='row'>
+	<div class='row' id='row-parallax'>
 		<div class="parallax-container">
-			<div class="parallax valign-wrapper center-align">
-				<div class='valign center-align splash-text' style='z-index: 10; margin-left:auto; margin-right:auto;'>
+			<div class="parallax valign-wrapper">
+				<div class='valign splash-text'>
 					<!-- splash_text_template goes here -->
 				</div>
 				<img src="img/stockholm.jpg">
@@ -52,12 +58,12 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 		</div>
 	</div>
 
-	<div class="container row">
+	<article class="container" id='container-sections'>
 
-		<section id="section-about" class="col s12">
+		<section class="hide" id="section-about">
 			<h1 class='red-text'>About</h1>
 
-			<div class='row' name='intro' id='intro'>
+			<div class='row' id='intro'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons medium red-text right'>search</i>
 				</div>
@@ -73,7 +79,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 			</div>
 
-			<div class='row' name='hiding' id='hiding'>
+			<div class='row' id='hiding'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons medium deep-orange-text right'>timer</i>
 				</div>
@@ -98,7 +104,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 			</div>
 
-			<div class='row' name='seeking' id='seeking'>
+			<div class='row' id='seeking'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons medium orange-text right'>search</i>
 				</div>
@@ -123,7 +129,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 			</div>
 
-			<div class='row' name='after' id='after'>
+			<div class='row' id='after'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons medium amber-text right'>cake</i>
 				</div>
@@ -136,7 +142,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 			</div>
 
-			<div class='row' name='bring' id='bring'>
+			<div class='row' id='bring'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons teal-text medium right'>book</i>
 				</div>
@@ -161,7 +167,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 			</div>
 
-			<div class='row' name='know' id='know'>
+			<div class='row' id='know'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons cyan-text medium right'>vpn_key</i>
 				</div>
@@ -184,10 +190,9 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 						</div>
 					</div>
 				</div>
-
 			</div>
 
-			<div class='row' name='zones' id='zones'>
+			<div class='row' id='zones'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons medium green-text right'>home</i>
 				</div>
@@ -218,7 +223,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 			</div>	
 
-			<div class='row' name='schedule' id='schedule'>
+			<div class='row' id='schedule'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons blue-text medium right'>timer</i>
 				</div>
@@ -230,9 +235,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 			</div>
 
-			
-
-			<div class='row' name='safety' id='safety'>
+			<div class='row' id='safety'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons red-text medium right'>warning</i>
 				</div>
@@ -256,7 +259,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 			</div>
 
-			<div class='row' name='register' id=''>
+			<div class='row' id='register'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons green-text medium right'>face</i>
 				</div>
@@ -273,11 +276,11 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 			</div>
 		</section>
 
-		<section id="section-register" class="col s12">
+		<section class="hide" id="section-register" >
 
 			<h1 class='green-text'>Register</h1>
-
-			<div class='row' name='entry' id='entry'>
+			<span></span>
+			<div class='row' id='entry'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons medium green-text right'>assignment_ind</i>
 				</div>
@@ -326,7 +329,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 			</div>
 
-			<div class='row hide' name='info' id='sub-info'>
+			<div class='row hide' id='sub-info'>
 
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons green-text medium right'>done</i>
@@ -361,124 +364,141 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 
 					<p class='flow-text case-register hide'>Don't worry, we'll also send you an email with your <b>secret code</b>, <b>team assignment</b>, and <b>home base location</b>, and further instructions.</p>
 				</div>
-
 			</div>
-
 		</section>
 
-		<section id="section-score" class="col s12">
+		<section class="hide" id="section-score">
 
 			<h1 class='blue-text'>Scoring</h1>
 
-			<div class='row hide-on-small-only' id='sub-scoring-info'>
-				<div class='col s12'>
-					<p class='flow-text left-align'> <b>Scoring works like this:</b> Everyone starts with 100 points. </p>
-				</div>
-				<div class='col s12 m3'>
-					<table id='mathtable'>
-						<tr>
-							<td class='right-align'> 100</td>
-							<td> points</td>
-						</tr>
-						<tr>
-							<td class='right-align'> ÷ 4</td>
-							<td> seekers</td>
-						</tr>
-						<tr>
-							<td class='right-align'> 25</td>
-							<td> points each</td>
-						</tr>
-					</table>
-				</div>
-				<div class='col s12 m9'>
-					 <p class='flow-text'><small>Those points are distributed amongst however many people find them, with the hider getting a share too. If you get found three times, each seeker gets 25pts, and you get the remaining 25pts. Thus, really good hiders get all 100pts to themselves. But that's not all. You get points for whoever you find, but you get <i>more</i> points if the people you found are great hiders; less people to share the points with.</small></p>
-				</div>
-				<div class='col s12'>
-					<h5>Let's begin.</h5>
-				</div>
-			</div>
+			<ul class="collapsible" data-collapsible="accordion" id='collapsible-scoring-info'>
+				<li>
+					<div class="collapsible-header">
+						<i class="material-icons blue-text">account_balance</i>
+						<span class='hide-on-med-and-up'>Touch</span>
+						<span class='hide-on-small-only'>Click</span> 
+						<b class='blue-text'>here</b> to see how scoring works.
+					</div>
 
-			<span id='sub-scoring-login'>
+					<div class="collapsible-body row" style='padding:20px;'>
 
+						<p class='col s12 m8 flow-text left-align'>
+							Everyone starts with 100 points. <small>Those points are distributed amongst however many people find them, with the hider getting a share too. If you get found three times, each seeker gets 25pts, and you get the remaining 25pts. Thus, really good hiders get all 100pts to themselves. But that's not all. You get points for whoever you find, but you get <i>more</i> points if the people you found are great hiders; less people to share the points with.</small> Let's begin.
+						</p>
+
+						<table class='col s12 m4' id='mathtable'>
+							<tr>
+								<td colspan=3 class='left-align'> <h5 class='blue-text'>Example</h5> </td>
+							</tr>
+							<tr>
+								<th> &nbsp;</th>
+								<th> 100</th>
+								<td> pts.</td>
+							</tr>
+							<tr>
+								<th> ÷</th>
+								<th> 4</th>
+								<td> shares <br/><small>(3 seekers + you)</small> </td>
+							</tr>
+							<tr>
+								<th> =</th>
+								<th> 25</th>
+								<td> pts. each</td>
+							</tr>
+						</table>
+					</div>
+				</li>
+			</ul>
+
+			<div class='row' id='row-scoring-login'>
 				<div class='col s2 m1 right-align'>
-					<i class='material-icons medium blue-text right' id='sub-scoring-login-icon'>face</i>
+					<i class='material-icons medium blue-text right' id='i-scoring-login-icon'>
+						face
+					</i>
 				</div>
 
 				<div class='col s10 m11'>
-					<h4 id='sub-scoring-login-msg'>First, we need to make sure it's really <b class='blue-text'>you</b>.</h4>
+					<h4 id='h4-scoring-login-msg'>
+						First, we need to make sure it's really <b class='blue-text'>you</b>.
+					</h4>
 				</div>
 
-				<div class='col s12 offset-m1 m11' id='sub-ident'>
-
-					<div class='row user-row'>
+				<div class='col s12 offset-m1 m11' id='col-login-entry'>
+					<div class='row' id='row-login-entry'>
 						<div class='col s12 m6 input-field'>
-							<h5 class=''><span>What's your </span>secret code?</h5>
+							<h5 class=''>What's your secret code?</h5>
 							<i class='material-icons grey-text prefix'>vpn_key</i>
 							<input value='b001' class='' placeholder='B001' id="my_code" maxlength=4 type="text" class="validate" style='text-transform:uppercase; font-size:x-large;'>
 						</div>
 						<div class='col s12 m6 input-field'>
-							<h5 class=''><span>What's your </span>home base?</h5>
+							<h5 class=''>What's your home base?</h5>
 							<i class='material-icons grey-text prefix'>home</i>
 							<input value='4' class='' placeholder='4' id="my_base" maxlength=4 type="text" class="validate" style="font-size:x-large;">
 						</div>
 						<div class='col s12 left-align'>
 							<br/>
-							<a class="btn btn-large blue white-text" id='check'>
-								<i class='material-icons left'>face</i> it's me
+							<a class="btn btn-large green white-text" id='check'>
+								<i class='material-icons left'>done</i> it's me
 							</a>
 						</div>
 					</div>
-
 				</div>
+			</div>
 
-			</span>
-
-			<span class='hide' id='sub-scoring-entry'>
+			<div class='row hide' id='row-scoring-entry'>
 
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons medium blue-text right'>search</i>
 				</div>
 
-				<div class='col s10 m11'>
-					<h5>Please type in the <b class='blue-text'>secret codes</b> of the people you found.</h5>
+				<div class='col s10 m11' id='col-scoring-instructions'>
+					<h4>Please type in the <b class='blue-text'>secret codes</b> of the people you found.</h4>
 				</div>
 
 				<div class='col s12 offset-m1 m11'>
 					<div class='fields'>
 						<div class='field input-field'>
-							<input class="find" placeholder="A123"  maxlength=4 type="text" class="validate" style='text-transform:uppercase; font-size:x-large;'>
+							<input class="find" placeholder="secret code"  maxlength=4 type="text" class="validate">
 						</div>
 						<div class='field input-field'>
-							<input class="find" placeholder="B234" maxlength=4 type="text" class="validate" style='text-transform:uppercase; font-size:x-large;'>
+							<input class="find" placeholder="secret code" maxlength=4 type="text" class="validate">
 						</div>
 					</div>
-					<a class='btn btn-large left blue white-text' id='submit-fields'><i class='material-icons left'>send</i>submit finds</a>
-				</div>
-			</span>
+					<a class='btn btn-large left grey lighten-5 grey-text' id='add-fields'><i class='material-icons left'>add</i>add 2 more fields</a>
 
-		</section>
-	</div>
-
-	<div class='container'>
-		<footer>
-		</footer>
-	</div>
-
-	<footer class="page-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col s12">
-					<h5 class="white-text">Credits</h5>
-					<p class="grey-text text-lighten-4"> 
-					Original concept by <a href="http://www.aei.mpg.de/79660/employee_page?c=151012&employee_id=31928">Claudio Paganini</a>, Anna Robbins, Aaron Luo, and <a href="http://jbuckland.com">James Buckland</a>. Built by James Buckland with <a href="https://parse.com">Parse</a> / <a href='backbonejs.org'>Backbone.js</a>. Emails with <a href="http://mailgun.com">Mailgun</a>. Hosted by <a href="https://pages.github.com/">GitHub Pages</a>. CSS styling with <a href="materializecss.com">Materialize</a>. Animated with <a href="https://daneden.github.io/animate.css/">Animate.css</a>. Icons via <a href="http://www.google.com/design/icons/">Material icons</a>. 
-					</p>
+					<a class='btn btn-large right blue white-text' id='submit-fields'><i class='material-icons left'>send</i>submit finds</a>
 				</div>
 			</div>
-		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				© 2014 Gamlasquad
-				<a class="grey-text text-lighten-4 right" href="https://github.com/ambuc/hideandseek.ninja">Source on GitHub.</a>
+		</section>
+	</article>
+
+	<footer class="page-footer grey lighten-4">
+		<div class="row" id='row-footer'>
+
+			<div class='col s12 m6 hide-on-small-only right-align'> 
+				<h5 class='grey-text'><span style='text-decoration:underline;'><span id='cycle_city'>nyc</span>.hideandseek.com</span>?</h5>
+			</div>
+
+			<div class='col s12 m6 hide-on-small-only'> 
+				<h5 class='grey-text text-darken-2'>Host a game yourself!</h6>
+			</div>
+
+			<div class='col s12 center-align grey-text text-darken-2'>
+
+				<a class='' href='mailto:james.adam.buckland@gmail.com?subject=hideandseek.ninja City Request'>Email us</a> to talk about setting up a game of <i>Hide and Seek</i> in your hometown.
+
+				<br class='hide-on-small-only'/>
+
+				© 2015 Gamlasquad (<a href="http://www.aei.mpg.de/79660/employee_page?c=151012&employee_id=31928">Claudio Paganini</a> • Anna Robbins •  Aaron Luo • <a href="http://jbuckland.com">James Buckland</a>.)
+
+				<br class='hide-on-small-only'/>
+
+				Built by <a href="http://jbuckland.com">James Buckland</a>. Source on
+				<a href="https://github.com/ambuc/hideandseek.ninja"> GitHub.</a>
+				
+				<!-- Hi, developers.  -->
+				<!-- This site was built with with <a href="https://parse.com">Parse</a> / <a href='backbonejs.org'>Backbone.js</a> / <a href="http://mailgun.com">Mailgun</a> / <a href="https://pages.github.com/">GitHub Pages</a> / <a href="materializecss.com">Materialize</a> / <a href="https://daneden.github.io/animate.css/">Animate.css</a> / <a href="http://www.google.com/design/icons/">Material icons</a>. -->
+
 			</div>
 		</div>
 	</footer>
@@ -556,12 +576,12 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 		<h3 class='white blue-text'> <%=when.month%> <%=when.day%>  <%=when.year%> <small class='black-text'>at</small> <%=when.time%> </h3>
 		<h3 class='green white-text'>Free</h3>
 		<br/>
-		<h3 class='white green-text' id=''> Register now! <br/> </h3>
+		<h3 class='white green-text'> Register now! <br/> </h3>
 </script>
 
 <script type='text/template' id='map_image_template'>
 	<p class='flow-text'>Click to enlarge, or view it on <a href= '<%=map_link%>'>Google Maps</a>. </p>
-	<img class='responsive-img materialboxed map' src='<%=map%>'>
+	<a href='<%=map%>'><img class='responsive-img  map' src='<%=map%>'></a>
 </script>
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -570,7 +590,6 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 <script src="scrollintoview.min.js"></script>
-
 
 <script src="stockholm.js"></script>
 <script src="hideandseek.js"></script>
