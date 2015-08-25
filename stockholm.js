@@ -1,5 +1,5 @@
 var data = {
-	"event_link" : 'https://www.facebook.com/events/1568336823455138/',
+	"event_link" : "https://www.facebook.com/events/1568336823455138/",
 	"where" : {
 		"city" : "Stockholm",
 		"country" : "Sweden"		
@@ -12,6 +12,7 @@ var data = {
 	},
 	"big_picture" : "http://images.nationalgeographic.com/wpf/media-live/photos/000/025/cache/stockholm-old-town_2566_600x450.jpg",
 	"map" : "https://raw.githubusercontent.com/ambuc/hideandseek/master/map.png",
+	"map_link" : "http://maps.google.com",
 	"zones" : {
 		"count" : 12,
 		"array" : [
@@ -73,5 +74,8 @@ var data = {
 		"seeking_duration" : "40",
 		"reset_duration" : "10" 
 	},
-	"meetup_location" : "Kungstradgarden"
+	"meetup" : {
+		"location" : "Kungstrådgarden",
+		"link" : "http://google.com"
+	}
 };

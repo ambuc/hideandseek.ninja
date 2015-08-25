@@ -17,6 +17,14 @@ html{
 	bottom: 8px;
 }
 
+h1{
+	color:white;
+	text-transform: uppercase;
+	font-weight: 900;
+	text-align: center;
+	font-size:5em;
+}
+
 h2{
 	text-transform: uppercase;
 	padding:10px;
@@ -55,6 +63,19 @@ table.basestable th{
 }
 
 /*scheduletable*/
+table.scheduletable {
+	font-size: 1.3em;
+}
+table.scheduletable .duration{
+	color:grey;
+	font-weight: 300;
+}
+table.scheduletable .duration::before{
+	content: " ~ ";
+}
+table.scheduletable .duration::after{
+	content: " min";
+}
 table.scheduletable th{
 	text-align: right;
 }
@@ -77,13 +98,17 @@ table.scheduletable td{
 	display:inline-block !important;
 	width:90% !important;
 	height:auto !important;
+	font-size:1.5em;
+	text-transform: uppercase;
+	font-weight: 900;
+	text-align: center;
+}
+.nav-tabs li a:hover{
+	box-shadow: none;
 }
 
 div.indicator{
-	display:none;
-	/*bottom:-15px!important;*/
-	/*height:5px !important;*/
-	/*background-color: blue !important;*/
+	background-color: pink !important;
 }
 
 
@@ -108,15 +133,9 @@ table#mathtable tr:last-child {
 	border-top:1px solid black;
 }
 
+/*footer*/
 
-
-
-footer{
-	opacity:0.3;
-	padding:10px;
-	margin-bottom:20px;
-	border-left:1px solid grey;
-}
-footer:hover{
-	opacity:1.0;
+footer a{
+	color:inherit;
+	text-decoration: underline;
 }

@@ -24,6 +24,23 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 </head>
 <body>
 
+	<div class='container row'>
+		<br/>
+		<div class="col s12">
+			<ul class="row nav-tabs">
+				<li class="col s4">
+					<a class='white red-text' data-href='#section-about'> About</a>
+				</li>
+				<li class="col s4">
+					<a class='white green-text' data-href='#section-register'> Register</a>
+				</li>
+				<li class="col s4">
+					<a class='active white blue-text' data-href='#section-score'> Scoring</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
 	<div class='row'>
 		<div class="parallax-container">
 			<div class="parallax valign-wrapper center-align">
@@ -35,28 +52,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 		</div>
 	</div>
 
-	<script type="text/template" id="splash_text_template">
-		<h2 class='white red-text'> Hide and Seek <small class='black-text'>in</small> <%=where.city%></h2>
-		<h3 class='white blue-text'> <%=when.month%> <%=when.day%>  <%=when.year%> <small class='black-text'>at</small> <%=when.time%> </h3>
-		<h3 class='green white-text'>Free</h3>
-		<br/>
-		<h3 class='white green-text'> Register now! <br/> </h3>
-	</script>
-
 	<div class="container row">
-		<div class="col s12">
-			<ul class="tabs nav-tabs">
-				<li class="tab">
-					<a class='btn btn-large red white-text' href='#section-about' style=''> <i class='material-icons left hide-on-small-only'>info</i> About</a>
-				</li>
-				<li class="tab">
-					<a class='btn btn-large green white-text' href='#section-register' style=''> <i class='material-icons left hide-on-small-only'>assignment_ind</i> Register</a>
-				</li>
-				<li class="tab">
-					<a class='active btn btn-large blue white-text' href='#section-score' style=''> <i class='material-icons left hide-on-small-only'>mode_edit</i> Scoring</a>
-				</li>
-			</ul>
-		</div>
 
 		<section id="section-about" class="col s12">
 			<h1 class='red-text'>About</h1>
@@ -76,8 +72,6 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 					</p>
 				</div>
 			</div>
-
-			<h2>how to play</h2>
 
 			<div class='row' name='hiding' id='hiding'>
 				<div class='col s2 m1 right-align'>
@@ -142,8 +136,6 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 			</div>
 
-			<h2>before the game</h2>
-
 			<div class='row' name='bring' id='bring'>
 				<div class='col s2 m1 right-align'>
 					<i class='material-icons teal-text medium right'>book</i>
@@ -195,74 +187,36 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 
 			</div>
 
-			<h2>the day of</h2>
-
 			<div class='row' name='zones' id='zones'>
-				<div class='col s12 m8'>
-					<div class='row'>
-						<div class='col s2 m1 right-align'>
-							<i class='material-icons medium green-text right'>home</i>
-						</div>
-						<div class='col s10 m11'>
-							<h4 class='green-text'>Where to Meet</h4>
-						</div>
-						<div class='col s12 offset-m1 m11'>
-							<p class='flow-text'>We try to pick landmarks. <small>But if you don't know where something is, try searching for it in <a href="http:/maps.google.com">Google Maps</a>.</small></p>
-						</div>
-						<div class='col s12 offset-m1 m11 bases-table-text'>
-							<!-- bases_table_template goes here -->
-						</div>
-					</div>
+				<div class='col s2 m1 right-align'>
+					<i class='material-icons medium green-text right'>home</i>
 				</div>
-				<div class='col s12 m4'>
-					<div class='row'>
-						<div class='col s2 m1 right-align'>
-							<i class='material-icons medium light-green-text right'>zoom_in</i>
-						</div>
-						<div class='col s10 m11'>
-							<h4>
-								<span class='light-green-text'>Game Map</span><br/>
-							</h4>
-						</div>
-						<div class='col s12 offset-m1 m11'>
-							<p class='flow-text'>Click to enlarge.</p> 
-							<span class='map-image'>
-								<!-- map_image_template goes here -->
-							</span>
-							<p>Or view it on <a>Google Maps</a>.</p>
-						</div>
-					</div>	
+				<div class='col s10 m11'>
+					<h4 class='green-text'>Where to Meet</h4>
+				</div>
+				<div class='col s12 offset-m1 m11'>
+					<p class='flow-text'>We try to pick landmarks. <small>But if you don't know where something is, try searching for it in <a href="http:/maps.google.com">Google Maps</a>.</small></p>
+				</div>
+				<div class='col s12 offset-m1 m11 bases-table-text'>
+					<!-- bases_table_template goes here -->
 				</div>
 			</div>
 
-			<script type="text/template" id="bases_table_template">
-				<table class='bordered basestable nospacing'>
-					<thead class='hide'>
-						<tr>
-							<td><i>Home&nbsp;Base</i></td>
-							<td><i>Map</i></td>
-							<td><i>Meeting&nbsp;Point</i></td>
-						</tr>
-					</thead>
-					<tbody>
-						<% for(var i = 0; i < zones.array.length; i++) { %>
-							<tr>
-								<th> Base&nbsp;<%=parseInt(i+1)%> </th>
-								<td class='center-align'> 
-									<a href="<%= zones.array[i].link %>">
-										<i class='material-icons'>location_on</i>
-									</a> 
-								</td>
-								<td> <%= zones.array[i].desc %> </td>
-							</tr>
-						<% } %>
-					</tbody>
-				</table>
-			</script>
-
-			<script type='text/template' id='map_image_template'>
-				<img class='responsive-img materialboxed map' src='<%=map%>'>
-			</script>
+			<div class='row'>
+				<div class='col s2 m1 right-align'>
+					<i class='material-icons medium light-green-text right'>zoom_in</i>
+				</div>
+				<div class='col s10 m11'>
+					<h4>
+						<span class='light-green-text'>Game Map</span><br/>
+					</h4>
+				</div>
+				<div class='col s12 offset-m1 m11'>
+					<span class='map-image'>
+						<!-- map_image_template goes here -->
+					</span>
+				</div>
+			</div>	
 
 			<div class='row' name='schedule' id='schedule'>
 				<div class='col s2 m1 right-align'>
@@ -276,44 +230,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 			</div>
 
-			<script type='text/template' id='schedule_text_template'>
-
-				<table class='scheduletable nospacing'>
-					<tr>
-						<th> before&nbsp;<span><%=schedule.start_time%>:00pm</span> </th>
-						<td> Locate your home base and meet your teammates. </td>
-					</tr>
-					<tr>
-						<th>at&nbsp;<span><%=schedule.start_time%>:00pm</span></th>
-						<td><span class='orange-text'>Team A</span> hides. (<i><%=schedule.hiding_duration%>&nbsp;min</i>)</td>
-					</tr>
-					<tr>
-						<th><span><%=parseInt(schedule.start_time)%>:<%=schedule.hiding_duration%>pm</span></th>
-						<td><span class='green-text'>Team B</span> seeks. (<i><%=schedule.seeking_duration%>&nbsp;min</i>)</td>
-					</tr>
-					<tr>
-						<th><span><%=parseInt(schedule.start_time)%>:<%=parseInt(schedule.hiding_duration)+parseInt(schedule.seeking_duration)%>pm</span></th>
-						<td><b>Reset!</b> You have <%=schedule.reset_duration%>&nbsp;min; go back to your home base and regroup.</td>
-					</tr>
-					<tr>
-						<th>at&nbsp;<span><%=parseInt(schedule.start_time)+1%>:00pm</span></th>
-						<td><span class='green-text'>Team B</span> hides. (<i><%=schedule.hiding_duration%>&nbsp;min</i>)</td>
-					</tr>
-					<tr>
-						<th><span><%=parseInt(schedule.start_time)+1%>:<%=schedule.hiding_duration%>pm</span></th>
-						<td><span class='orange-text'>Team A</span> seeks. (<i><%=schedule.seeking_duration%>&nbsp;min</i>)</td>
-					</tr>
-					<tr>
-						<th><span><%=parseInt(schedule.start_time)+1%>:<%=parseInt(schedule.hiding_duration)+parseInt(schedule.seeking_duration)%>pm</span></th>
-						<td><b>Game Over!</b> Head on over to Kungstradgården for the...</td>
-					</tr>
-					<tr>
-						<th>at&nbsp;<span><%=parseInt(schedule.start_time)+2%>:00pm</span></th>
-						<td><b>Group Photo!</b> Also, remember to enter the codes of those you found online.</td>
-					</tr>
-
-				</table>
-			</script>
+			
 
 			<div class='row' name='safety' id='safety'>
 				<div class='col s2 m1 right-align'>
@@ -348,7 +265,7 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 				</div>
 				<div class='col s12 offset-m1 m11'>
 					<p class='flow-text'>You have to, if you want your secret code, home base, team, and more.</p>
-					<a href='/register.html' class='btn btn-large green white-text'>
+					<a class='btn btn-large green white-text' id='signmeup'>
 						<i class='material-icons left'>thumb_up</i>
 						Sign me up!
 					</a>
@@ -544,18 +461,115 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 
 	<div class='container'>
 		<footer>
-			Original concept by <a href="http://www.aei.mpg.de/79660/employee_page?c=151012&employee_id=31928">Claudio Paganini</a>, Anna Robbins, Aaron Luo, and <a href="http://jbuckland.com">James Buckland</a>. Built by James Buckland with <a href="https://parse.com">Parse</a> / <a href='backbonejs.org'>Backbone.js</a>. Emails with <a href="http://mailgun.com">Mailgun</a>. Hosted by <a href="https://pages.github.com/">GitHub Pages</a>. CSS styling with <a href="materializecss.com">Materialize</a>. Animated with <a href="https://daneden.github.io/animate.css/">Animate.css</a>. Icons via <a href="http://www.google.com/design/icons/">Material icons</a>. 
 		</footer>
 	</div>
 
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<h5 class="white-text">Credits</h5>
+					<p class="grey-text text-lighten-4"> 
+					Original concept by <a href="http://www.aei.mpg.de/79660/employee_page?c=151012&employee_id=31928">Claudio Paganini</a>, Anna Robbins, Aaron Luo, and <a href="http://jbuckland.com">James Buckland</a>. Built by James Buckland with <a href="https://parse.com">Parse</a> / <a href='backbonejs.org'>Backbone.js</a>. Emails with <a href="http://mailgun.com">Mailgun</a>. Hosted by <a href="https://pages.github.com/">GitHub Pages</a>. CSS styling with <a href="materializecss.com">Materialize</a>. Animated with <a href="https://daneden.github.io/animate.css/">Animate.css</a>. Icons via <a href="http://www.google.com/design/icons/">Material icons</a>. 
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2014 Gamlasquad
+				<a class="grey-text text-lighten-4 right" href="https://github.com/ambuc/hideandseek.ninja">Source on GitHub.</a>
+			</div>
+		</div>
+	</footer>
+
 </body>
+
+<script type="text/template" id="bases_table_template">
+	<table class='bordered basestable nospacing'>
+		<thead class='hide'>
+			<tr>
+				<td><i>Home&nbsp;Base</i></td>
+				<td><i>Map</i></td>
+				<td><i>Meeting&nbsp;Point</i></td>
+			</tr>
+		</thead>
+		<tbody>
+			<% for(var i = 0; i < zones.array.length; i++) { %>
+				<tr>
+					<th> Base&nbsp;<%=parseInt(i+1)%> </th>
+					<td class='center-align'> 
+						<a href="<%= zones.array[i].link %>">
+							<i class='material-icons'>location_on</i>
+						</a> 
+					</td>
+					<td> <%= zones.array[i].desc %> </td>
+				</tr>
+			<% } %>
+		</tbody>
+	</table>
+</script>
+
+<script type='text/template' id='schedule_text_template'>
+	<table class='scheduletable nospacing'>
+		<tr>
+			<th> Before&nbsp;<span><%=schedule.start_time%>:00pm</span> </th>
+			<td> <b>Get Ready!</b> Locate your home base and meet your teammates. </td>
+		</tr>
+		<tr>
+			<th>at&nbsp;<span><%=schedule.start_time%>:00pm</span></th>
+			<td><span class='orange-text'>Team A</span> hides. <span class='duration'><%=schedule.hiding_duration%></span></td>
+		</tr>
+		<tr>
+			<th><span><%=parseInt(schedule.start_time)%>:<%=schedule.hiding_duration%>pm</span></th>
+			<td><span class='green-text'>Team B</span> seeks. <span class='duration'><%=schedule.seeking_duration%></span></td>
+		</tr>
+		<tr>
+			<th><span><%=parseInt(schedule.start_time)%>:<%=parseInt(schedule.hiding_duration)+parseInt(schedule.seeking_duration)%>pm</span></th>
+			<td><b>Reset!</b> Go back to your home base and regroup. <span class='duration'><%=schedule.reset_duration%></span></td>
+		</tr>
+		<tr>
+			<th>at&nbsp;<span><%=parseInt(schedule.start_time)+1%>:00pm</span></th>
+			<td><span class='green-text'>Team B</span> hides. <span class='duration'><%=schedule.hiding_duration%></span></td>
+		</tr>
+		<tr>
+			<th><span><%=parseInt(schedule.start_time)+1%>:<%=schedule.hiding_duration%>pm</span></th>
+			<td><span class='orange-text'>Team A</span> seeks. <span class='duration'><%=schedule.seeking_duration%></span></td>
+		</tr>
+		<tr>
+			<th><span><%=parseInt(schedule.start_time)+1%>:<%=parseInt(schedule.hiding_duration)+parseInt(schedule.seeking_duration)%>pm</span></th>
+			<td><b>Game Over!</b> Head on over to <a href="<%=meetup.link%>"><%=meetup.location%></a> for the...</td>
+		</tr>
+		<tr>
+			<th>at&nbsp;<span><%=parseInt(schedule.start_time)+2%>:00pm</span></th>
+			<td><b>Group Photo!</b></td>
+		</tr>
+		<tr>
+			<th>After <span><%=parseInt(schedule.start_time)+2%>:00pm</span></th>
+			<td><b>Remember!</b> Tally your points afterwards. <br/> Click <i>Points</i> at the top of the page, and enter the secret codes of the people you found. </td>
+		</tr>
+	</table>
+</script>
+
+<script type="text/template" id="splash_text_template">
+		<h2 class='white red-text'> Hide and Seek <small class='black-text'>in</small> <%=where.city%></h2>
+		<h3 class='white blue-text'> <%=when.month%> <%=when.day%>  <%=when.year%> <small class='black-text'>at</small> <%=when.time%> </h3>
+		<h3 class='green white-text'>Free</h3>
+		<br/>
+		<h3 class='white green-text' id=''> Register now! <br/> </h3>
+</script>
+
+<script type='text/template' id='map_image_template'>
+	<p class='flow-text'>Click to enlarge, or view it on <a href= '<%=map_link%>'>Google Maps</a>. </p>
+	<img class='responsive-img materialboxed map' src='<%=map%>'>
+</script>
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+<script src="scrollintoview.min.js"></script>
 
 
 <script src="stockholm.js"></script>

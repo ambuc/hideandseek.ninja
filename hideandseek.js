@@ -31,17 +31,54 @@ var Find = Parse.Object.extend("Find", {
 	}
 });
 
+
 $(document).ready(function(){
 
 	Parse.$ = jQuery; //reassign jQuery, god knows why
 	Parse.initialize("oDrVT97pILfNP3PtXnzSwZD0vsgScEGdLmR0ZtBO", "d7fE3uszRBHCai7pLgSmuxEntLaUbIvNG5RKuruA");
 
-	start_materialize();
+	$('section').hide();
+
+	var current_tab = "#section-about";
+	initialize_tabs();
+
+	go_to_tab(current_tab, false);
+
 	template_from_data( data );
+	start_materialize();
+
 	initialize_register();
 	initialize_scoring();
 
 });
+
+
+function initialize_tabs(){
+
+	$('ul.nav-tabs li a').click(function(){
+		go_to_tab($(this).attr('data-href'));
+	});
+
+	$('#signmeup').click(function(){
+		console.log('clicked register now');
+		go_to_tab('#section-register');
+	});
+
+}
+
+function go_to_tab(tab, isScroll){
+   if (typeof(isScroll)==='undefined') { isScroll = true; }
+
+	console.log(tab);
+	$('section').hide();
+	$(tab).show();
+	if(isScroll){
+		$(tab).scrollintoview({
+		    duration: 1700,
+		    direction: "vertical"
+		});		
+	}
+}
 
 function start_materialize(){
     $('.materialboxed').materialbox();
