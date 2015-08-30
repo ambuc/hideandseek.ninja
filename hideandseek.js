@@ -26,6 +26,8 @@ $(document).ready(function(){
 	Parse.$ = jQuery; //reassign jQuery, god knows why
 	Parse.initialize("oDrVT97pILfNP3PtXnzSwZD0vsgScEGdLmR0ZtBO", "d7fE3uszRBHCai7pLgSmuxEntLaUbIvNG5RKuruA");
 
+	// console.log(city);
+
 	template_from_data( data );
 	start_materialize();
 
