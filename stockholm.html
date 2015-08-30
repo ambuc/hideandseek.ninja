@@ -38,7 +38,23 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 						</a>
 					</li>
 					<li class="col s4">
-						<a class='active blue-text' data-href='#section-score'>
+						<a class='actiar $_GET = {};
+if(document.location.toString().indexOf('?') !== -1) {
+    var query = document.location
+                   .toString()
+                   // get the query string
+                   .replace(/^.*?\?/, '')
+                   // and remove any existing hash string (thanks, @vrijdenker)
+                   .replace(/#.*$/, '')
+                   .split('&');
+
+    for(var i=0, l=query.length; i<l; i++) {
+       var aux = decodeURIComponent(query[i]).split('=');
+       $_GET[aux[0]] = aux[1];
+    }
+}
+//get the 'index' query parameter
+alert($_GET['index']);ve blue-text' data-href='#section-score'>
 							Scoring
 						</a>
 					</li>
@@ -298,22 +314,22 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 					<div class="row">
 						<div class="input-field col s12 m6">
 				          <i class="material-icons prefix green-text">face</i>
-							<input value="Test" id="first_name" type="text" class="validate">
+							<input id="first_name" type="text" class="validate">
 							<label for="first_name">First Name</label>
 						</div>
 						<div class="input-field col s12 m6">
 				          <i class="material-icons prefix green-text">nature_people</i>
-							<input value="Person" id="last_name" type="text" class="validate">
+							<input id="last_name" type="text" class="validate">
 							<label for="last_name">Last Name</label>
 						</div>
 						<div class="input-field col s12 m6">
 				          <i class="material-icons prefix green-text">email</i>
-							<input value="person@email.com" id="email" type="email" class="validate">
+							<input id="email" type="email" class="validate">
 							<label for="email" data-error="Not&nbsp;a&nbsp;real&nbsp;email..." >Email</label>
 						</div>
 						<div class="input-field col s12 m6">
 				          <i class="material-icons prefix green-text">home</i>
-							<input value="123" id="home" type="text" class="validate">
+							<input id="home" type="text" class="validate">
 							<label for="home">Where are you from?</label>
 						</div>
 						<div class='input-field col s12' id='agree-field'>
@@ -428,12 +444,12 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 						<div class='col s12 m6 input-field'>
 							<h5 class=''>What's your secret code?</h5>
 							<i class='material-icons grey-text prefix'>vpn_key</i>
-							<input value='b001' class='' placeholder='B001' id="my_code" maxlength=4 type="text" class="validate" style='text-transform:uppercase; font-size:x-large;'>
+							<input class='' placeholder='B001' id="my_code" maxlength=4 type="text" class="validate" style='text-transform:uppercase; font-size:x-large;'>
 						</div>
 						<div class='col s12 m6 input-field'>
 							<h5 class=''>What's your home base?</h5>
 							<i class='material-icons grey-text prefix'>home</i>
-							<input value='4' class='' placeholder='4' id="my_base" maxlength=4 type="text" class="validate" style="font-size:x-large;">
+							<input class='' placeholder='4' id="my_base" maxlength=4 type="text" class="validate" style="font-size:x-large;">
 						</div>
 						<div class='col s12 left-align'>
 							<br/>
