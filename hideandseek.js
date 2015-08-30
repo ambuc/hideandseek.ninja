@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 	// tabs
 
-	var current_tab = "#section-score";
+	var current_tab = "#section-about";
 	initialize_tabs();
 	go_to_tab(current_tab, false);
 
