@@ -1,6 +1,4 @@
-<!-- file:///Users/jamesbuckland/Documents/github/hideandseek.ninja/index.html
-file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
- -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,71 +19,116 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 	<link rel="stylesheet" type="text/css" href="index.css" />
 	<style>
 		html { 
-		  background: url(img/city.jpg) no-repeat center center fixed; 
-		  -webkit-background-size: cover;
-		  -moz-background-size: cover;
-		  -o-background-size: cover;
-		  background-size: cover;
+			background: url(img/city.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			/*background: #ccc;*/
 		}
-		.row{
-			height:100%;
+		body{
+			padding:30px;
 		}
-		.splash-text{
-			margin-top:17%;
+		small{ border-bottom: none !important; }
+		/*#current-games	{ margin-top : 150px ; }*/
+		#old-games{ 
+			position:absolute;
+			bottom:30px;
+			left:30px; 
 		}
+		
+		.city-date{
+			text-transform:none;
+			font-size:1.4em;
+			margin-top:-5px !important;
+		}
+		.city {
+			display:inline-block;
+			text-align: left;
+			margin-left:-20px;
+			padding-left:0px;
+		}
+
 		.splash-text > *{
 			padding:20px !important;
 		}
-		.splash-text h2 a{
+		.splash-text .city-link a{
 			text-decoration: underline;
 		}
-		.splash-text h2:hover a{
+		.splash-text .city-link:hover, .splash-text .city-link:hover a{
 			color:white !important;
 		}
-		.splash-text h2:hover{
+		.splash-text .city-link:hover{
 			background-color:black !important;
 		}
-
+		
 	</style>
 
 </head>
 <body>
-
-	<div class='row'>
-		<div class="center-align">
-			<div class='splash-text'>
-				<!-- <br/> <br/> <br/> <br/> <br/> -->
-				<h1 class='white red-text'> Hide and Seek <small>in</small> </h1>
-				<br/>
-				<h2 class='white'><a class='blue-text' style='pointer-events: all;' href='stockholm.html'> Stockholm </a></h2>
-				<h2 class='white'><a class='blue-text' style='pointer-events: all;' href='sydney.html'> Sydney </a></h2>
-				<h2 class='white'><a class='blue-text' style='pointer-events: all;' href='nyc.html'> NYC </a></h2>
-				<h2 class='white'><a class='blue-text' style='pointer-events: all;' href='dubai.html'> Dubai </a></h2>
-
-			</div>
-		</div>
+	<div class='row left-align splash-text' id='current-games'>
 	</div>
-
+	<div class='row left-align splash-text hide-on-small-only' id='old-games'>
+	</div>
 </body>
 
-
-
-
-<!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
-<script src="lib/jquery-2.1.4.min.js"></script>
-<!-- <script src="https://www.parsecdn.com/js/parse-1.5.0.min.js"></script> -->
-<!-- <script src="lib/parse-1.5.0.min.js"></script> -->
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> -->
-<script src="lib/underscore-min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script> -->
-<script src="lib/materialize.min.js"></script>
-<!-- <script src="lib/scrollintoview.min.js"></script> -->
-
-<script src="stockholm.js"></script>
-<script>
-	$('.parallax').parallax();
+<script type='text/template' id='current_games_template'>
+	<h1 class='white black-text left-align'> <span class='red-text'>Hide</span><wbr>and<wbr><span class='red-text'>Seek</span><wbr>.ninja</h1>
+	<br/>
+	<% for(var i = 0; i < current.length; i++) { %>
+		<div class='city'>
+			<h2 class='city-link white'>
+				in <a class='blue-text' style='pointer-events: all;' href='<%=current[i].url%>'> 
+					<%=current[i].name%> 
+				</a>
+			</h2>
+			<br/>
+			<h3 class='white black-text city-date'>
+				<%=current[i].date.format("MMM Do")%>
+			</h3>
+		</div>
+	<% } %>
 </script>
-<!-- <script src="hideandseek.js"></script> -->
+
+<script type='text/template' id='old_games_template'>
+	<h6 class='white grey-text'>Past Games:</h5>
+	<% for(var i = 0; i < before.length; i++) { %>
+		<h6 class='city-link white'>
+			<a class='blue-text text-lighten-3' style='pointer-events: all;' href='<%=before[i].url%>'> 
+				<%=before[i].name%> 
+			</a>
+		</h6>
+	<% } %>
+</script>
+
+
+
+<script src="lib/jquery-2.1.4.min.js"></script>
+<script src="lib/underscore-min.js"></script>
+<script src="lib/moment.min.js"></script>
+<script src="lib/materialize.min.js"></script>
+
+<script src="games.js"></script>
+
+<script>
+	_.each(games, function(game){
+		game.date = moment(game.date, "MM/DD/YYYY");
+		// console.log(game.date.isBefore());
+	})
+	var current = [];
+	var before = [];
+
+	_.each(games, function(game){
+		if(game.date.isBefore()){
+			before.push(game);
+		} else {
+			current.push(game);
+		}
+	});
+
+	$('#current-games').html( _.template($( "#current_games_template" ).html() ) ( current ) );
+	$('#old-games').html( _.template($( "#old_games_template" ).html() ) ( before ) );
+
+</script>
 
 </html>

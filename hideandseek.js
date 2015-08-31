@@ -1,9 +1,9 @@
 var Player = Parse.Object.extend("Player", {
 	defaults:{
-		'first'		: 	null,
-		'last'		: 	null,
-	    'email'		: 	null,
-	    'home'		:   null,
+		'first'			: 	null,
+		'last'			: 	null,
+	    'email'			: 	null,
+	    'home'			:   null,
 	    'secret_code'	: 	null,
 	    'home_base'		: 	null,
 	    'team'			: 	null
@@ -70,13 +70,8 @@ function start_materialize(){
 // tabs
 
 function initialize_tabs(){
-	$('ul#row-tabs li a').click(function(){
-		go_to_tab($(this).attr('data-href'));
-	});
-
-	$('#signmeup').click(function(){
-		go_to_tab('#section-register');
-	});
+    $('.modal-trigger').leanModal();
+	$('#scoring-modal').openModal();
 }
 
 function go_to_tab(tab, isScroll){
@@ -206,6 +201,7 @@ function show_registration(thisPlayer, isAlreadyRegistered){
 	} else {
 		$('.case-register').removeClass('hide');
 	}
+	$('#registry-form').remove();
 
 	$('#sub-info').removeClass('hide');
 	$('#sub-info').addClass('animated pulse');
@@ -260,16 +256,15 @@ function deny_user(){
 	$('#i-scoring-login-icon').removeClass('blue-text');
 	$('#i-scoring-login-icon').addClass('red-text animated wobble');
 
-	$('#h4-scoring-login-msg').html("Sorry, we can't seem to log you in. Try again?");
+	$('#h4-scoring-login-msg').html("<b class='red-text'>Sorry</b>, we can't seem to log you in. Try again?");
 	$('#my_code').val('');
 	$('#my_base').val('');
 
-	// alert('no');
 }
 
 function verify_user(thisPlayer){
 
-	$('#col-scoring-instructions h4').prepend("<small>Welcome back, <b class='green-text'>" + thisPlayer.get('first') + "</b>! ("+thisPlayer.get('secret_code')+")</small><br/>");
+	$('#col-scoring-instructions h4').prepend("<small>Welcome back, <b class='blue-text'>" + thisPlayer.get('first') + "</b>! ("+thisPlayer.get('secret_code')+")</small><br/>");
 
 	$('#row-scoring-login').slideUp("normal", function() { 
 		$(this).remove(); 

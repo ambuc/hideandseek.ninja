@@ -1,520 +1,462 @@
-<!-- file:///Users/jamesbuckland/Documents/github/hideandseek.ninja/index.html
-file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
- -->
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Hide and Seek</title>
+	<head>
+		<title>Hide and Seek</title>
+		<!-- meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<!-- Josefin Sans -->
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="index.css" />	
+	</head>
 
-	<!-- meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<body>
+		<div class='row splash-text center-align' id='row-parallax'>
+			<!-- splash_text_template goes here -->
+		</div>
 
-	<!-- Josefin Sans -->
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
-
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-	<!-- css -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="index.css" />	
-</head>
-
-<body>
-
-	<div class="navbar-fixed">
-		<nav class='white'>
-			<div class="nav-wrapper container" id='container-tabs'>
-				<ul class="row" id="row-tabs">
-					<li class="col s4">
-						<a class='red-text' data-href='#section-about'>
-							About
-						</a>
-					</li>
-					<li class="col s4">
-						<a class='green-text' data-href='#section-register'>
-							Register
-						</a>
-					</li>
-					<li class="col s4">
-						<a class='active blue-text' data-href='#section-score'>
-							Scoring
-						</a>
-					</li>
-				</ul>
+		<div class='row red lighten-4'>
+			<div class='col s2 m1 right-align'>
+				<i class='material-icons medium red-text right'>search</i>
 			</div>
-		</nav>
-	</div>
 
-	<div class='row' id='row-parallax'>
-		<div class="parallax-container">
-			<div class="parallax valign-wrapper">
-				<div class='valign splash-text'>
-					<!-- splash_text_template goes here -->
+			<div class='col s10 m11'>
+				<h4>Imagine thousands of people playing <b class='red-text'>Hide and Seek</b> across a whole city.</h5>
+			</div>
+
+			<div class='col s12 offset-m1 m11'>
+					<p class='flow-text'>
+						Here's how it works: 
+						when you register, you get a <b>secret code</b>.<br/>
+						During the game, <b>write down the codes of the people you find</b>.<br/>
+						Enter them online after the game and become the world champion!
+					</p>
 				</div>
-				<img src="img/stockholm.jpg">
 			</div>
 		</div>
-	</div>
 
-	<article class="container" id='container-sections'>
-
-		<section class="hide" id="section-about">
-			<h1 class='red-text'>About</h1>
-
-			<div class='row' id='intro'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons medium red-text right'>search</i>
-				</div>
-				<div class='col s10 m11'>
-					<h4>It's <b class='red-text'>outdoor Hide and Seek</b>, with a twist.</h5>
-				</div>
-				<div class='col s12 offset-m1 m11'>
-					<p class='flow-text'>
-						Imagine thousands of people playing <b>Hide and Seek</b> across a whole city. <br/> <br/>
-						Here's how it works: 
-						when you register, you get a <b>secret code</b>. During the game, <b>write down the codes of the people you find</b>. Enter them online after the game and become the world champion!
-					</p>
-				</div>
+		<div class='row deep-orange lighten-5' id='hiding'>
+			<div class='col s2 m1 right-align'>
+				<i class='material-icons medium deep-orange-text right'>timer</i>
 			</div>
-
-			<div class='row' id='hiding'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons medium deep-orange-text right'>timer</i>
-				</div>
-				<div class='col s10 m11'>
-					<h4 class='deep-orange-text'> When you're <b>hiding</b>, </h4>
-				</div>
-				<div class='col s12 offset-m1 m11'>
-					<div class='row'>
-						<div class='col s12 m4 l4'>
-							<h5> Wear a sock on your hand. </h5>
-							<p>This helps seekers figure out who's playing, and who's just walking around. Make sure to wear it visibly! It's part of the fun.</p>
-						</div>
-						<div class='col s12 m4 l4'>
-							<h5>Tell seekers your code.</h5>
-							<p>When somebody finds you, tell them the four-digit code, so they can write it down. We can't stop you from lying, but if nobody finds you it's mighty suspicious.</p>
-						</div>
-						<div class='col s12 m4 l4'>
-							<h5>Keep hiding.</h5>
-							<p>Don't stop hiding just because you've been found once. You can keep playing until the round ends.</p>
-						</div>
+			<div class='col s10 m11'>
+				<h4 class='deep-orange-text'> When you're <b>hiding</b>, </h4>
+			</div>
+			<div class='col s12 offset-m1 m11'>
+				<div class='row'>
+					<div class='col s12 m4 l4'>
+						<h5> Wear a sock on your hand. </h5>
+						<p>This helps seekers figure out who's playing, and who's just walking around. Make sure to wear it visibly! It's part of the fun.</p>
+					</div>
+					<div class='col s12 m4 l4'>
+						<h5>Tell seekers your code.</h5>
+						<p>When somebody finds you, tell them the four-digit code, so they can write it down. We can't stop you from lying, but if nobody finds you it's mighty suspicious.</p>
+					</div>
+					<div class='col s12 m4 l4'>
+						<h5>Keep hiding.</h5>
+						<p>Don't stop hiding just because you've been found once. You can keep playing until the round ends.</p>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class='row' id='seeking'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons medium orange-text right'>search</i>
-				</div>
-				<div class='col s10 m11'>
-					<h4 class='orange-text'> When you're <b>seeking</b>, </h4>
-				</div>
-				<div class='col s12 offset-m1 m11'>
-					<div class='row'>
-						<div class='col s12 m4 l4'>
-							<h5>Write down codes.</h5>
-							<p>When you find someone, write down their secret code, so we know you found them. After the game, there'll be a form online to enter them, so we can tally your score.</p>
-						</div>
-						<div class='col s12 m4 l4'>
-							<h5>Keep quiet.</h5>
-							<p>The more seekers who find a hider, the less points each seeker recieves. So if you find someone, keep quiet! </p>
-						</div>
-						<div class='col s12 m4 l4'>
-							<h5>Be clever.</h5>
-							<p>The more valuable hiders will be those who are found less often. Be sneaky - don't waste your time on obvious hiders.</p>
-						</div>
+		<div class='row orange lighten-5' id='seeking'>
+			<div class='col s2 m1 right-align'>
+				<i class='material-icons medium orange-text right'>search</i>
+			</div>
+			<div class='col s10 m11'>
+				<h4 class='orange-text'> When you're <b>seeking</b>, </h4>
+			</div>
+			<div class='col s12 offset-m1 m11'>
+				<div class='row'>
+					<div class='col s12 m4 l4'>
+						<h5>Write down codes.</h5>
+						<p>When you find someone, write down their secret code, so we know you found them. After the game, there'll be a form online to enter them, so we can tally your score.</p>
+					</div>
+					<div class='col s12 m4 l4'>
+						<h5>Keep quiet.</h5>
+						<p>The more seekers who find a hider, the less points each seeker recieves. So if you find someone, keep quiet! </p>
+					</div>
+					<div class='col s12 m4 l4'>
+						<h5>Be clever.</h5>
+						<p>The more valuable hiders will be those who are found less often. Be sneaky - don't waste your time on obvious hiders.</p>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class='row' id='after'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons medium amber-text right'>cake</i>
-				</div>
-				<div class='col s10 m11'>
-					<h4 class='amber-text'> After the game, </h4>
-				</div>
-				<div class='col s12 offset-m1 m11'>
-					<h5 class=''>Come back to this website and <b class='amber-text'>enter the codes you collected</b>. </h5> 
-					<p> We'll tally the points and send out rankings and winners within a few days. No prizes, sorry. <br/> But you can win honour and glory!</p>
-				</div>
+		<div class='row amber lighten-5' id='after'>
+			<div class='col s2 m1 right-align'>
+				<i class='material-icons medium amber-text right'>cake</i>
 			</div>
+			<div class='col s10 m11'>
+				<h4 class='amber-text'> After the game, </h4>
+			</div>
+			<div class='col s12 offset-m1 m11'>
+				<h5 class=''>Come back to this website and <b class='amber-text'>enter the codes you collected</b>. </h5> 
+				<p> We'll tally the points and send out rankings and winners within a few days. No prizes, sorry. <br/> But you can win honour and glory!</p>
+			</div>
+		</div>
 
-			<div class='row' id='bring'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons teal-text medium right'>book</i>
-				</div>
-				<div class='col s10 m11'>
-					<h4 class='teal-text'>You need to bring</h4>
-				</div>
-				<div class='col s12 offset-m1 m11'>
-					<div class='row'>
-						<div class='col s12 m4 l4'>
-							<h5>an <b class='teal-text'>extra sock</b>.</h5>
-							<p>Wear it <i>visibly</i> on your hand, so that other players can identify you when you're hiding.</p>
-						</div>
-						<div class='col s12 m4 l4'>
-							<h5>a <b class='teal-text'>pen and paper</b>.</h5>
-							<p>You'll need to write down the codes you find, and smartphone batteries tend to die real fast.</p>
-						</div>
-						<div class='col s12 m4 l4'>
-							<h5>a <b class='teal-text'>clock</b>.</h5>
-							<p>You'll need to know when the rounds begin and end.</p>
-						</div>
+		<div class='row light-green lighten-5' id='bring'>
+			<div class='col s2 m1 right-align'>
+				<i class='material-icons light-green-text medium right'>book</i>
+			</div>
+			<div class='col s10 m11'>
+				<h4 class='light-green-text'>You need to bring</h4>
+			</div>
+			<div class='col s12 offset-m1 m11'>
+				<div class='row'>
+					<div class='col s12 m4 l4'>
+						<h5>an <b class='light-green-text'>extra sock</b>.</h5>
+						<p>Wear it <i>visibly</i> on your hand, so that other players can identify you when you're hiding.</p>
+					</div>
+					<div class='col s12 m4 l4'>
+						<h5>a <b class='light-green-text'>pen and paper</b>.</h5>
+						<p>You'll need to write down the codes you find, and smartphone batteries tend to die real fast.</p>
+					</div>
+					<div class='col s12 m4 l4'>
+						<h5>a <b class='light-green-text'>clock</b>.</h5>
+						<p>You'll need to know when the rounds begin and end.</p>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class='row' id='know'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons cyan-text medium right'>vpn_key</i>
-				</div>
-				<div class='col s10 m11'>
-					<h4 class='cyan-text'>You need to know</h4>
-				</div>
-				<div class='col s12 offset-m1 m11'>
-					<div class='row'>
-						<div class='col s12 m4 l4'>
-							<h5>your <b class='cyan-text'>secret code</b>.</h5>
-							<p>This will be a four-digit number, like <b>A3B5</b>. You tell seekers your secret code if you're found, and you want to collect the secret codes of others.</p>
-						</div>
-						<div class='col s12 m4 l4'>
-							<h5>which <b class='cyan-text'>team</b> you're on.</h5>
-							<p>This'll be one of two teams, like <b>Team A</b> or <b>Team B</b>, or something like that. This determines when you hide and when you seek, and with whom you are aligned.</p>
-						</div>
-						<div class='col s12 m4 l4'>
-							<h5>where your <b class='cyan-text'>home base</b> is.</h5>
-							<p>This'll be a zone number, like <b>Zone #24</b> or something like that. Check the map to figure out where your home base is. That's where you meet the day of.</p>
-						</div>
+		<div class='row green lighten-5' id='know'>
+			<div class='col s2 m1 right-align'>
+				<i class='material-icons green-text medium right'>vpn_key</i>
+			</div>
+			<div class='col s10 m11'>
+				<h4 class='green-text'>You Need to Know</h4>
+			</div>
+			<div class='col s12 offset-m1 m11'>
+				<div class='row'>
+					<div class='col s12 m4 l4'>
+						<h5>your <b class='green-text'>secret code</b>.</h5>
+						<p>This will be a four-digit number, like <b>A3B5</b>. You tell seekers your secret code if you're found, and you want to collect the secret codes of others.</p>
+					</div>
+					<div class='col s12 m4 l4'>
+						<h5>which <b class='green-text'>team</b> you're on.</h5>
+						<p>This'll be one of two teams, like <b>Team A</b> or <b>Team B</b>, or something like that. This determines when you hide and when you seek, and with whom you are aligned.</p>
+					</div>
+					<div class='col s12 m4 l4'>
+						<h5>where your <b class='green-text'>home base</b> is.</h5>
+						<p>This'll be a zone number, like <b>Zone #24</b> or something like that. Check the map to figure out where your home base is. That's where you meet the day of.</p>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class='row' id='zones'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons medium green-text right'>home</i>
-				</div>
-				<div class='col s10 m11'>
-					<h4 class='green-text'>Where to Meet</h4>
-				</div>
-				<div class='col s12 offset-m1 m11'>
-					<p class='flow-text'>We try to pick landmarks. <small>But if you don't know where something is, try searching for it in <a href="http:/maps.google.com">Google Maps</a>.</small></p>
-				</div>
-				<div class='col s12 offset-m1 m11 bases-table-text'>
-					<!-- bases_table_template goes here -->
-				</div>
+		<div class='row teal lighten-5' id='zones'>
+			<div class='col s2 m1 right-align'>
+				<i class='material-icons medium teal-text right'>home</i>
+			</div>
+			<div class='col s10 m11'>
+				<h4 class='teal-text'>Where to Meet</h4>
+			</div>
+			<div class='col s12 offset-m1 m11'>
+				<p class='flow-text'>We try to pick landmarks. <small>But if you don't know where something is, try searching for it in <a href="http:/maps.google.com">Google Maps</a>.</small></p>
+			</div>
+			<div class='col s12 offset-m1 m11 bases-table-text'>
+				<!-- bases_table_template goes here -->
+			</div>
+		</div>
+
+		<div class='row cyan lighten-5' id='map'>
+			<div class='col s2 m1 right-align'>
+				<i class='material-icons medium cyan-text right'>zoom_in</i>
+			</div>
+			<div class='col s10 m11'>
+				<h4>
+					<span class='cyan-text'>Game Map</span><br/>
+				</h4>
+			</div>
+			<div class='col s12 offset-m1 m11'>
+				<span class='map-image'>
+					<!-- map_image_template goes here -->
+				</span>
+			</div>
+		</div>	
+
+		<div class='row blue lighten-5' id='schedule'>
+			<div class='col s2 m1 right-align'>
+				<i class='material-icons blue-text medium right'>timer</i>
+			</div>
+			<div class='col s10 m11'>
+				<h4 class='blue-text'>Gameday schedule</h4>
+			</div>
+			<div class='col s12 offset-m1 m11 schedule-text'>
+
+			</div>
+		</div>
+
+		<div class='row indigo lighten-5' id='safety'>
+			<div class='col s2 m1 right-align'>
+				<i class='material-icons indigo-text medium right'>warning</i>
+			</div>
+			<div class='col s10 m11'>
+				<h4><span class='indigo-text'>Safety first.</span></h4>
+			</div>
+			<div class='col s12 offset-m1 m11'>	
+				<p class='flow-text'>
+					Use your common sense. <br/>
+					<b class='indigo-text'>Stay outdoors.</b> Don't trespass. Don't bother anyone. <br/>
+					<u>Don't hide under cars</u>.
+					<br/> 
+					Basically, don't do anything you wouldn't normally do.
+				</p>
+				<p>
+					Seriously, we can't stress this enough. 
+					Don't hide under cars. 
+					<b>Don't hide under cars.</b>
+					<span class='indigo-text'><b>Don't hide under cars.</b></span>
+				</p>
+			</div>
+		</div>
+
+		<div class='row deep-purple lighten-5' id='register'>
+			<div class='col s2 m1 right-align'>
+				<i class='material-icons deep-purple-text medium right'>face</i>
+			</div>
+			<div class='col s10 m11'>
+				<h4 class='deep-purple-text'>Register for <b>Hide and Seek</b>!</h4>
+			</div>
+			<div class='col s12 offset-m1 m11'>
+				<p class='flow-text'>You have to, if you want your secret code, home base, team, and more.</p>
+				<a class='btn btn-large deep-purple white-text' id='signmeup'>
+					<i class='material-icons left'>thumb_up</i>
+					Sign me up!
+				</a>
+				<br/>
+				<br/>
+			</div>
+		</div>
+
+		<div class="row grey lighten-3" id='row-footer'>
+
+			<div class='col s12 m6 hide-on-small-only right-align'> 
+				<h5 class='grey-text text-lighten-1'><span style='text-decoration:underline;'><span id='cycle_city'>nyc</span>.hideandseek.com</span>?</h5>
 			</div>
 
-			<div class='row'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons medium light-green-text right'>zoom_in</i>
+			<div class='col s12 m6 hide-on-small-only'> 
+				<h5 class='grey-text text-lighten-1'>Host a game yourself!</h6>
 				</div>
-				<div class='col s10 m11'>
-					<h4>
-						<span class='light-green-text'>Game Map</span><br/>
-					</h4>
-				</div>
-				<div class='col s12 offset-m1 m11'>
-					<span class='map-image'>
-						<!-- map_image_template goes here -->
-					</span>
-				</div>
-			</div>	
 
-			<div class='row' id='schedule'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons blue-text medium right'>timer</i>
-				</div>
-				<div class='col s10 m11'>
-					<h4 class='blue-text'>Gameday schedule</h4>
-				</div>
-				<div class='col s12 offset-m1 m11 schedule-text'>
+				<div class='col s12 center-align grey-text text-lighten-1'>
+
+					<a class='' href='mailto:james.adam.buckland@gmail.com?subject=hideandseek.ninja City Request'>Email us</a> to talk about setting up a game of <i>Hide and Seek</i> in your hometown.
+
+					<br class='hide-on-small-only'/>
+
+					© 2015 Gamlasquad (<a href="http://www.aei.mpg.de/79660/employee_page?c=151012&employee_id=31928">Claudio Paganini</a> • Anna Robbins •  Aaron Luo • <a href="http://jbuckland.com">James Buckland</a>.)
+
+					<br class='hide-on-small-only'/>
+
+					Built by <a href="http://jbuckland.com">James Buckland</a>. Source on
+					<a href="https://github.com/ambuc/hideandseek.ninja"> GitHub.</a>
 					
+					<!-- Hi, developers.  -->
+					<!-- This site was built with with <a href="https://parse.com">Parse</a> / <a href='backbonejs.org'>Backbone.js</a> / <a href="http://mailgun.com">Mailgun</a> / <a href="https://pages.github.com/">GitHub Pages</a> / <a href="materializecss.com">Materialize</a> / <a href="https://daneden.github.io/animate.css/">Animate.css</a> / <a href="http://www.google.com/design/icons/">Material icons</a>. -->
+
 				</div>
 			</div>
+		</div>
 
-			<div class='row' id='safety'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons red-text medium right'>warning</i>
-				</div>
-				<div class='col s10 m11'>
-					<h4><span class='red-text'>Safety first.</span></h4>
-				</div>
-				<div class='col s12 offset-m1 m11'>	
+		<div id="register-modal" class="modal">
+
+			<div class="modal-content">
+				<a class="right white red-text modal-action modal-close waves-effect waves-red btn-flat"> <i class='material-icons medium'>close</i> </a>
+
+				<h3 class='purple-text'>Register</h1>
+
+				<div class="row" id='registry-form'>
 					<p class='flow-text'>
-						Use your common sense. <br/>
-						<b class='red-text'>Stay outdoors.</b> Don't trespass. Don't bother anyone. <br/>
-						<u>Don't hide under cars</u>.
-						<br/> 
-						Basically, don't do anything you wouldn't normally do.
-					</p>
-					<p>
-						Seriously, we can't stress this enough. 
-						Don't hide under cars. 
-						<b>Don't hide under cars.</b>
-						<span class='red-text'><b>Don't hide under cars.</b></span>
-					 </p>
-				</div>
-			</div>
-
-			<div class='row' id='register'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons green-text medium right'>face</i>
-				</div>
-				<div class='col s10 m11'>
-					<h4 class='green-text'>Register for <b>Hide and Seek</b>!</h4>
-				</div>
-				<div class='col s12 offset-m1 m11'>
-					<p class='flow-text'>You have to, if you want your secret code, home base, team, and more.</p>
-					<a class='btn btn-large green white-text' id='signmeup'>
-						<i class='material-icons left'>thumb_up</i>
-						Sign me up!
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<section class="hide" id="section-register" >
-
-			<h1 class='green-text'>Register</h1>
-			<span></span>
-			<div class='row' id='entry'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons medium green-text right'>assignment_ind</i>
-				</div>
-
-				<div class='col s10 m11'>
-					<h4>Get your <b class='green-text'>secret code</b>.</h5>
-				</div>
-
-				<div class='col s12 offset-m1 m11' id='registry-form'>
-					<p class='flow-text'>Once registered, we'll email you your 
-						<b>secret code</b>, <b>team assignment</b>, and <b>home base location</b>.
-						You will also recieve more information in the days leading up to the event. Stay tuned!
+						Once registered, <b class='purple-text'>screenshot</b> or <b class='purple-text'>write down</b> your information!
 					</p>
 
-					<div class="row">
-						<div class="input-field col s12 m6">
-				          <i class="material-icons prefix green-text">face</i>
-							<input id="first_name" type="text" class="validate">
-							<label for="first_name">First Name</label>
-						</div>
-						<div class="input-field col s12 m6">
-				          <i class="material-icons prefix green-text">nature_people</i>
-							<input id="last_name" type="text" class="validate">
-							<label for="last_name">Last Name</label>
-						</div>
-						<div class="input-field col s12 m6">
-				          <i class="material-icons prefix green-text">email</i>
-							<input id="email" type="email" class="validate">
-							<label for="email" data-error="Not&nbsp;a&nbsp;real&nbsp;email..." >Email</label>
-						</div>
-						<div class="input-field col s12 m6">
-				          <i class="material-icons prefix green-text">home</i>
-							<input id="home" type="text" class="validate">
-							<label for="home">Where are you from?</label>
-						</div>
-						<div class='input-field col s12' id='agree-field'>
-							<input type="checkbox" class="filled-in" id="agree-checkbox" />
-					    	<label for="agree-checkbox">By registering, you agree to our Terms and Conditions. Basically, 1) <b>Don't break any laws</b>, and 2) <b>Don't bother anybody</b>. You're responsible for yourself in public, and we assume no risk for your well-being.</label>
-						</div>
-						<div class='input-field col s12 right-align'>
-					    	<br/>
-							<a class='btn btn-large green white-text' id='sign-me-up'>
+					<div class="input-field col s12 m6">
+						<i class="material-icons prefix purple-text">face</i>
+						<input id="first_name" type="text" class="validate">
+						<label for="first_name">First Name</label>
+					</div>
+
+					<div class="input-field col s12 m6">
+						<i class="material-icons prefix purple-text">nature_people</i>
+						<input id="last_name" type="text" class="validate">
+						<label for="last_name">Last Name</label>
+					</div>
+
+					<div class="input-field col s12 m6">
+						<i class="material-icons prefix purple-text">email</i>
+						<input id="email" type="email" class="validate">
+						<label for="email" data-error="Not&nbsp;a&nbsp;real&nbsp;email..." >Email</label>
+					</div>
+
+					<div class="input-field col s12 m6">
+						<i class="material-icons prefix purple-text">home</i>
+						<input id="home" type="text" class="validate">
+						<label for="home">Where are you from?</label>
+					</div>
+
+					<div class='input-field col s12' id='agree-field'>
+						<input type="checkbox" class="filled-in" id="agree-checkbox" />
+						<label for="agree-checkbox">By registering, you agree to our Terms and Conditions. Basically, 1) <b>Don't break any laws</b>, and 2) <b>Don't bother anybody</b>. You're responsible for yourself in public, and we assume no risk for your well-being.</label>
+					</div>
+
+					<div class='input-field col s12 right-align'>
+						<br/>
+							<a class='btn btn-large purple white-text' id='sign-me-up'>
 								<i class='material-icons left'>done</i> sign me up</a>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class='row hide' id='sub-info'>
+				<div class='row hide' id='sub-info'>
 
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons green-text medium right'>done</i>
-				</div>
-
-				<div class='col s10 m11'>
-					<h4 class='case-register hide'><b class='green-text' id='name'>[NAME]</b>, you're all signed up!</h4>
-					<h4 class='case-already hide'><b class='green-text' id='name'>[NAME]</b>, you've already signed up!</h4>
-				</div>
-
-				<div class='col s12 offset-m1 m11'>
-
-					<span class='case-already hide'>
-						<p class='flow-text' >It looks like you've already signed up under this email: <b id='email'></b>. But, just in case you forgot, here's the secret code, team assignment, and home base you were given.</p>
-					</span>
-
-					<div class='row center-align'>
-						<div class='col s12 m4'>
-							<h5>Secret Code</h5>
-							<h3 class='red-text' id='secret_code'></h3>
-						</div>
-						<div class='col s12 m4'>
-							<h5>Team Assignment</h5>
-							<h3>Team <span class='green-text' id='team'></span></h3>
-						</div>
-						<div class='col s12 m4'>
-							<h5>Home Base</h5>
-							<h3>#<span class='blue-text' id='home_base'></span></h3>
-							<p class='home-info' style='text-decoration:underline;'></p>
-						</div>
+					<div class='col s12'>
+						<h4 class='case-register hide'><b class='purple-text' id='name'>[NAME]</b>, you're all signed up!</h4>
+						<h4 class='case-already hide'><b class='purple-text' id='name'>[NAME]</b>, you've already signed up!</h4>
 					</div>
 
-					<p class='flow-text case-register hide'>Don't worry, we'll also send you an email with your <b>secret code</b>, <b>team assignment</b>, and <b>home base location</b>, and further instructions.</p>
-				</div>
-			</div>
-		</section>
+					<div class='col s12'>
 
-		<section class="hide" id="section-score">
+						<span class='case-already hide'>
+							<p> It looks like you've already signed up under this email: <b id='email'></b>. But, just in case you forgot, here's the secret code, team assignment, and home base you were given.</p>
+						</span>
 
-			<h1 class='blue-text'>Scoring</h1>
-
-			<ul class="collapsible" data-collapsible="accordion" id='collapsible-scoring-info'>
-				<li>
-					<div class="collapsible-header">
-						<i class="material-icons blue-text">account_balance</i>
-						<span class='hide-on-med-and-up'>Touch</span>
-						<span class='hide-on-small-only'>Click</span> 
-						<b class='blue-text'>here</b> to see how scoring works.
-					</div>
-
-					<div class="collapsible-body row" style='padding:20px;'>
-
-						<p class='col s12 m8 flow-text left-align'>
-							Everyone starts with 100 points. <small>Those points are distributed amongst however many people find them, with the hider getting a share too. If you get found three times, each seeker gets 25pts, and you get the remaining 25pts. Thus, really good hiders get all 100pts to themselves. But that's not all. You get points for whoever you find, but you get <i>more</i> points if the people you found are great hiders; less people to share the points with.</small> Let's begin.
-						</p>
-
-						<table class='col s12 m4' id='mathtable'>
-							<tr>
-								<td colspan=3 class='left-align'> <h5 class='blue-text'>Example</h5> </td>
-							</tr>
-							<tr>
-								<th> &nbsp;</th>
-								<th> 100</th>
-								<td> pts.</td>
-							</tr>
-							<tr>
-								<th> ÷</th>
-								<th> 4</th>
-								<td> shares <br/><small>(3 seekers + you)</small> </td>
-							</tr>
-							<tr>
-								<th> =</th>
-								<th> 25</th>
-								<td> pts. each</td>
-							</tr>
-						</table>
-					</div>
-				</li>
-			</ul>
-
-			<div class='row' id='row-scoring-login'>
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons medium blue-text right' id='i-scoring-login-icon'>
-						face
-					</i>
-				</div>
-
-				<div class='col s10 m11'>
-					<h4 id='h4-scoring-login-msg'>
-						First, we need to make sure it's really <b class='blue-text'>you</b>.
-					</h4>
-				</div>
-
-				<div class='col s12 offset-m1 m11' id='col-login-entry'>
-					<div class='row' id='row-login-entry'>
-						<div class='col s12 m6 input-field'>
-							<h5 class=''>What's your secret code?</h5>
-							<i class='material-icons grey-text prefix'>vpn_key</i>
-							<input class='' placeholder='B001' id="my_code" maxlength=4 type="text" class="validate" style='text-transform:uppercase; font-size:x-large;'>
+						<div class='row center-align'>
+							<div class='col s12 m4'>
+								<h5>Secret Code</h5>
+								<h3 class='red-text' id='secret_code'></h3>
+							</div>
+							<div class='col s12 m4'>
+								<h5>Team Assignment</h5>
+								<h3>Team <span class='green-text' id='team'></span></h3>
+							</div>
+							<div class='col s12 m4'>
+								<h5>Home Base</h5>
+								<h3>#<span class='blue-text' id='home_base'></span></h3>
+								<p class='home-info' style='text-decoration:underline;'></p>
+							</div>
 						</div>
-						<div class='col s12 m6 input-field'>
-							<h5 class=''>What's your home base?</h5>
-							<i class='material-icons grey-text prefix'>home</i>
-							<input class='' placeholder='4' id="my_base" maxlength=4 type="text" class="validate" style="font-size:x-large;">
-						</div>
-						<div class='col s12 left-align'>
-							<br/>
-							<a class="btn btn-large green white-text" id='check'>
-								<i class='material-icons left'>done</i> it's me
-							</a>
-						</div>
+
+						<p class='flow-text case-register hide'>Don't worry, we'll also send you an email with your <b>secret code</b>, <b>team assignment</b>, and <b>home base location</b>, and further instructions.</p>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class='row hide' id='row-scoring-entry'>
+		<div id="scoring-modal" class="modal">
+			<div class="modal-content">
+				<a class="right white red-text modal-action modal-close waves-effect waves-red btn-flat"> <i class='material-icons medium'>close</i> </a>
 
-				<div class='col s2 m1 right-align'>
-					<i class='material-icons medium blue-text right'>search</i>
-				</div>
+				<h3 class='blue-text'>Scoring</h3>
 
-				<div class='col s10 m11' id='col-scoring-instructions'>
-					<h4>Please type in the <b class='blue-text'>secret codes</b> of the people you found.</h4>
-				</div>
-
-				<div class='col s12 offset-m1 m11'>
-					<div class='fields'>
-						<div class='field input-field'>
-							<input class="find" placeholder="secret code"  maxlength=4 type="text" class="validate">
+				<ul class="collapsible" data-collapsible="accordion" id='collapsible-scoring-info'>
+					<li>
+						<div class="collapsible-header center-align">
+							How does scoring work?
 						</div>
-						<div class='field input-field'>
-							<input class="find" placeholder="secret code" maxlength=4 type="text" class="validate">
+
+						<div class="collapsible-body" style='padding:20px;'>
+
+							Everyone starts with 100 points. Those points are distributed amongst however many people find them, with the hider getting a share too. If you get found three times, each seeker gets 25pts, and you get the remaining 25pts. Thus, really good hiders get all 100pts to themselves. But that's not all. You get points for whoever you find, but you get <i>more</i> points if the people you found are great hiders; less people to share the points with.
+
+							<table class='' id='mathtable'>
+								<!-- <tr>
+									<td colspan=3 class='left-align'> <h5 class='blue-text'>Example</h5> </td>
+								</tr> -->
+								<tr>
+									<th> &nbsp;</th>
+									<th> 100</th>
+									<td> pts.</td>
+								</tr>
+								<tr>
+									<th> ÷</th>
+									<th> 4</th>
+									<td> shares <br/><small>(3 seekers + you)</small> </td>
+								</tr>
+								<tr>
+									<th> =</th>
+									<th> 25</th>
+									<td> pts. each</td>
+								</tr>
+							</table>
 						</div>
+					</li>
+				</ul>
+
+				<div class='row' id='row-scoring-login'>
+
+					<div class='col s12' id='col-login-entry'>
+						<h5 id='h4-scoring-login-msg'>
+							First, we need to make sure it's really <b class='blue-text'>you</b>.
+						</h5>
 					</div>
-					<a class='btn btn-large left grey lighten-5 grey-text' id='add-fields'><i class='material-icons left'>add</i>add 2 more fields</a>
 
-					<a class='btn btn-large right blue white-text' id='submit-fields'><i class='material-icons left'>send</i>submit finds</a>
+					<div class='col s12 m6 input-field'>
+						<h5 class=''><b class='blue-text'>Your</b> secret code?</h5>
+						<i class='material-icons grey-text prefix'>vpn_key</i>
+						<input class='' placeholder='B001' id="my_code" maxlength=4 type="text" class="validate" style='text-transform:uppercase; font-size:x-large;'>
+					</div>
+					<div class='col s12 m6 input-field'>
+						<h5 class=''><b class='blue-text'>Your</b> home base?</h5>
+						<i class='material-icons grey-text prefix'>home</i>
+						<input class='' placeholder='4' id="my_base" maxlength=4 type="text" class="validate" style="font-size:x-large;">
+					</div>
+					<div class='col s12 left-align'>
+						<br/>
+						<a class="btn btn-large blue right white-text" id='check'>
+							<i class='material-icons left'>done</i> it's me
+						</a>
+					</div>
 				</div>
-			</div>
-		</section>
-	</article>
 
-	<footer class="page-footer grey lighten-4">
-		<div class="row" id='row-footer'>
+				<div class='row hide' id='row-scoring-entry'>
 
-			<div class='col s12 m6 hide-on-small-only right-align'> 
-				<h5 class='grey-text'><span style='text-decoration:underline;'><span id='cycle_city'>nyc</span>.hideandseek.com</span>?</h5>
-			</div>
+					<div class='col s2 m1 right-align'>
+						<i class='material-icons medium blue-text right'>search</i>
+					</div>
 
-			<div class='col s12 m6 hide-on-small-only'> 
-				<h5 class='grey-text text-darken-2'>Host a game yourself!</h6>
-			</div>
+					<div class='col s10 m11' id='col-scoring-instructions'>
+						<h5>Please type in the <b class='blue-text'>secret codes</b> of the people you found.</h3>
+					</div>
 
-			<div class='col s12 center-align grey-text text-darken-2'>
+					<div class='col s12 offset-m1 m11'>
+						<div class='fields'>
+							<div class='field input-field'>
+								<input class="find" placeholder="secret code"  maxlength=4 type="text" class="validate">
+							</div>
+							<div class='field input-field'>
+								<input class="find" placeholder="secret code" maxlength=4 type="text" class="validate">
+							</div>
+						</div>
+						<a class='btn btn-large left grey lighten-5 grey-text' id='add-fields'><i class='material-icons left'>add</i>add 2 more fields</a>
 
-				<a class='' href='mailto:james.adam.buckland@gmail.com?subject=hideandseek.ninja City Request'>Email us</a> to talk about setting up a game of <i>Hide and Seek</i> in your hometown.
-
-				<br class='hide-on-small-only'/>
-
-				© 2015 Gamlasquad (<a href="http://www.aei.mpg.de/79660/employee_page?c=151012&employee_id=31928">Claudio Paganini</a> • Anna Robbins •  Aaron Luo • <a href="http://jbuckland.com">James Buckland</a>.)
-
-				<br class='hide-on-small-only'/>
-
-				Built by <a href="http://jbuckland.com">James Buckland</a>. Source on
-				<a href="https://github.com/ambuc/hideandseek.ninja"> GitHub.</a>
-				
-				<!-- Hi, developers.  -->
-				<!-- This site was built with with <a href="https://parse.com">Parse</a> / <a href='backbonejs.org'>Backbone.js</a> / <a href="http://mailgun.com">Mailgun</a> / <a href="https://pages.github.com/">GitHub Pages</a> / <a href="materializecss.com">Materialize</a> / <a href="https://daneden.github.io/animate.css/">Animate.css</a> / <a href="http://www.google.com/design/icons/">Material icons</a>. -->
+						<a class='btn btn-large right blue white-text' id='submit-fields'><i class='material-icons left'>send</i>submit finds</a>
+					</div>
+				</div>
 
 			</div>
 		</div>
-	</footer>
 
-</body>
+	</body>
 
-<script type="text/template" id="bases_table_template">
-	<table class='bordered basestable nospacing'>
-		<thead class='hide'>
-			<tr>
-				<td><i>Home&nbsp;Base</i></td>
-				<td><i>Map</i></td>
-				<td><i>Meeting&nbsp;Point</i></td>
-			</tr>
-		</thead>
-		<tbody>
+	<script type="text/template" id="bases_table_template">
+		<table class='bordered basestable nospacing'>
+			<thead class='hide'>
+				<tr>
+					<td><i>Home&nbsp;Base</i></td>
+					<td><i>Map</i></td>
+					<td><i>Meeting&nbsp;Point</i></td>
+				</tr>
+			</thead>
+			<tbody>
 			<% for(var i = 0; i < zones.array.length; i++) { %>
 				<tr>
 					<th> Base&nbsp;<%=parseInt(i+1)%> </th>
@@ -526,76 +468,89 @@ file://localhost/Users/jamesbuckland/Documents/github/hideandseek/www/index.html
 					<td> <%= zones.array[i].desc %> </td>
 				</tr>
 			<% } %>
-		</tbody>
-	</table>
-</script>
+			</tbody>
+		</table>
+	</script>
 
-<script type='text/template' id='schedule_text_template'>
-	<table class='scheduletable nospacing'>
-		<tr>
-			<th> Before&nbsp;<span><%=schedule.start_time%>:00pm</span> </th>
-			<td> <b>Get Ready!</b> Locate your home base and meet your teammates. </td>
-		</tr>
-		<tr>
-			<th>at&nbsp;<span><%=schedule.start_time%>:00pm</span></th>
-			<td><span class='orange-text'>Team A</span> hides. <span class='duration'><%=schedule.hiding_duration%></span></td>
-		</tr>
-		<tr>
-			<th><span><%=parseInt(schedule.start_time)%>:<%=schedule.hiding_duration%>pm</span></th>
-			<td><span class='green-text'>Team B</span> seeks. <span class='duration'><%=schedule.seeking_duration%></span></td>
-		</tr>
-		<tr>
-			<th><span><%=parseInt(schedule.start_time)%>:<%=parseInt(schedule.hiding_duration)+parseInt(schedule.seeking_duration)%>pm</span></th>
-			<td><b>Reset!</b> Go back to your home base and regroup. <span class='duration'><%=schedule.reset_duration%></span></td>
-		</tr>
-		<tr>
-			<th>at&nbsp;<span><%=parseInt(schedule.start_time)+1%>:00pm</span></th>
-			<td><span class='green-text'>Team B</span> hides. <span class='duration'><%=schedule.hiding_duration%></span></td>
-		</tr>
-		<tr>
-			<th><span><%=parseInt(schedule.start_time)+1%>:<%=schedule.hiding_duration%>pm</span></th>
-			<td><span class='orange-text'>Team A</span> seeks. <span class='duration'><%=schedule.seeking_duration%></span></td>
-		</tr>
-		<tr>
-			<th><span><%=parseInt(schedule.start_time)+1%>:<%=parseInt(schedule.hiding_duration)+parseInt(schedule.seeking_duration)%>pm</span></th>
-			<td><b>Game Over!</b> Head on over to <a href="<%=meetup.link%>"><%=meetup.location%></a> for the...</td>
-		</tr>
-		<tr>
-			<th>at&nbsp;<span><%=parseInt(schedule.start_time)+2%>:00pm</span></th>
-			<td><b>Group Photo!</b></td>
-		</tr>
-		<tr>
-			<th>After <span><%=parseInt(schedule.start_time)+2%>:00pm</span></th>
-			<td><b>Remember!</b> Tally your points afterwards. <br/> Click <i>Points</i> at the top of the page, and enter the secret codes of the people you found. </td>
-		</tr>
-	</table>
-</script>
+	<script type='text/template' id='schedule_text_template'>
+		<table class='scheduletable nospacing'>
+			<tr>
+				<th> Before&nbsp;<span><%=schedule.start_time%>:00pm</span> </th>
+				<td> <b>Get Ready!</b> Locate your home base and meet your teammates. </td>
+			</tr>
+			<tr>
+				<th>at&nbsp;<span><%=schedule.start_time%>:00pm</span></th>
+				<td><b class='blue-text'>Team A</b> hides. <span class='duration'><%=schedule.hiding_duration%></span></td>
+			</tr>
+			<tr>
+				<th><span><%=parseInt(schedule.start_time)%>:<%=schedule.hiding_duration%>pm</b></th>
+				<td><b class='blue-text'>Team B</b> seeks. <span class='duration'><%=schedule.seeking_duration%></span></td>
+			</tr>
+			<tr>
+				<th><span><%=parseInt(schedule.start_time)%>:<%=parseInt(schedule.hiding_duration)+parseInt(schedule.seeking_duration)%>pm</span></th>
+				<td><b>Reset!</b> Go back to your home base and regroup. <span class='duration'><%=schedule.reset_duration%></span></td>
+			</tr>
+			<tr>
+				<th>at&nbsp;<span><%=parseInt(schedule.start_time)+1%>:00pm</span></th>
+				<td><b class='blue-text'>Team B</b> hides. <span class='duration'><%=schedule.hiding_duration%></span></td>
+			</tr>
+			<tr>
+				<th><span><%=parseInt(schedule.start_time)+1%>:<%=schedule.hiding_duration%>pm</span></th>
+				<td><b class='blue-text'>Team A</b> seeks. <span class='duration'><%=schedule.seeking_duration%></span></td>
+			</tr>
+			<tr>
+				<th><span><%=parseInt(schedule.start_time)+1%>:<%=parseInt(schedule.hiding_duration)+parseInt(schedule.seeking_duration)%>pm</span></th>
+				<td><b>Game Over!</b> Head on over to <a href="<%=meetup.link%>"><%=meetup.location%></a> for the...</td>
+			</tr>
+			<tr>
+				<th>at&nbsp;<span><%=parseInt(schedule.start_time)+2%>:00pm</span></th>
+				<td><b>Group Photo!</b></td>
+			</tr>
+			<tr>
+				<th>After <span><%=parseInt(schedule.start_time)+2%>:00pm</span></th>
+				<td><b>Remember!</b> Tally your points afterwards. <br/> Click <i>Points</i> at the top of the page, and enter the secret codes of the people you found. </td>
+			</tr>
+		</table>
+	</script>
 
-<script type="text/template" id="splash_text_template">
-		<h2 class='white red-text'> Hide and Seek <small class='black-text'>in</small> <%=where.city%></h2>
-		<h3 class='white blue-text'> <%=when.month%> <%=when.day%>  <%=when.year%> <small class='black-text'>at</small> <%=when.time%> </h3>
-		<h3 class='green white-text'>Free</h3>
+	<script type="text/template" id="splash_text_template">
+		<h2 class='white red-text'> 
+			Hide and Seek <small class='black-text'>in</small> <%=where.city%>
+		</h2>
+		<h3 class='white blue-text'> 
+			<%=when.month%> <%=when.day%>  <%=when.year%> <small class='black-text'>at</small> <%=when.time%> 
+		</h3>
+		<h3 class='white green-text'>Free</h3>
 		<br/>
-		<h3 class='white green-text'> Register now! <br/> </h3>
-</script>
+		<h3 class='purple'>
+			<a class='white-text modal-trigger' style='text-decoration:underline;' href='#register-modal'>
+				Register
+			</a>
+		</h3>
+		<h3 class='light-blue accent-3'>
+			<a class='white-text modal-trigger' style='text-decoration:underline;' href='#scoring-modal'>
+				Scoring
+			</a>
+		</h3>
+	</script>
 
-<script type='text/template' id='map_image_template'>
-	<p class='flow-text'>Click to enlarge, or view it on <a href= '<%=map_link%>'>Google Maps</a>. </p>
-	<a href='<%=map%>'><img class='responsive-img  map' src='<%=map%>'></a>
-</script>
+	<script type='text/template' id='map_image_template'>
+		<p class='flow-text'>
+			Click to enlarge, or view it on <a href= '<%=map_link%>'>Google Maps</a>. 
+			</p>
+		<a href='<%=map%>'>
+			<img class='responsive-img  map' src='<%=map%>'>
+		</a>
+	</script>
 
-<!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
-<script src="lib/jquery-2.1.4.min.js"></script>
-<!-- <script src="https://www.parsecdn.com/js/parse-1.5.0.min.js"></script> -->
-<script src="lib/parse-1.5.0.min.js"></script>
+	<script src="lib/jquery-2.1.4.min.js"></script>
+	<script src="lib/parse-1.5.0.min.js"></script>
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> -->
-<script src="lib/underscore-min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script> -->
-<script src="lib/materialize.min.js"></script>
-<script src="lib/scrollintoview.min.js"></script>
+	<script src="lib/underscore-min.js"></script>
+	<script src="lib/materialize.min.js"></script>
+	<script src="lib/scrollintoview.min.js"></script>
 
-<script src="stockholm.js"></script>
-<script src="hideandseek.js"></script>
+	<script src="stockholm.js"></script>
+	<script src="hideandseek.js"></script>
 
 </html>

@@ -2,6 +2,17 @@ html{
 	background-color: white;
 }
 
+.row{
+	margin:0px;
+	padding:10px;
+}
+
+.splash-text{
+	background: url(img/stockholm.jpg);
+	/*height:300px;*/
+	padding-top:30px;
+	padding-bottom:30px;
+}
 .splash-text h1, .splash-text h2, .splash-text h3, .splash-text h4, .splash-text h5, .splash-text h6{
 	padding:10px;
 
@@ -78,6 +89,9 @@ table.scheduletable .duration::after{
 }
 table.scheduletable th{
 	text-align: right;
+	/*font-style: italic;*/
+	font-weight: 400;
+	opacity: 0.9;
 }
 table.scheduletable span{
 	color: #2196f3;
@@ -85,40 +99,6 @@ table.scheduletable span{
 table.scheduletable td{
 	text-align: left;
 	/*border: 1px solid grey;*/
-}
-
-/* #row-tabs */
-.navbar-fixed li:hover{
-	background-color:inherit !important;
-}
-#row-tabs li a{
-	display:inline-block !important;
-	width:90% !important;
-	height:auto !important;
-	font-size:1.5em;
-	text-transform: uppercase;
-	font-weight: 900;
-	text-align: center;
-	background: white;
-}
-#row-tabs li a:hover{
-	box-shadow: none;
-	text-decoration: underline;
-}
-
-div.indicator{
-	background-color: pink !important;
-}
-
-
-/*#row-parallax*/
-#row-parallax {
-	text-align: center;
-}
-#row-parallax .splash-text{
-	z-index: 10; 
-	margin-left:auto; 
-	margin-right:auto;	
 }
 
 
@@ -148,6 +128,11 @@ table#mathtable tr:last-child {
 	border-top:1px solid black;
 }
 
+/*register-modal*/
+#register-modal .modal-content{
+	padding:20px;
+}
+
 /*scoring find*/
 .find{
 	text-transform: uppercase;
@@ -155,8 +140,11 @@ table#mathtable tr:last-child {
 }
 
 /*footer*/
-
+.page-footer{
+	margin-top:0px !important;
+}
 footer a{
 	color:inherit;
+	opacity: 0.4;
 	text-decoration: underline;
 }
