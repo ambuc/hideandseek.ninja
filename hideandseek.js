@@ -33,9 +33,9 @@ $(document).ready(function(){
 
 	// tabs
 
-	var current_tab = "#section-about";
+	// var current_tab = "#section-about";
 	initialize_tabs();
-	go_to_tab(current_tab, false);
+	// go_to_tab(current_tab, false);
 
 	initialize_footer();
 	initialize_register();
@@ -71,22 +71,22 @@ function start_materialize(){
 
 function initialize_tabs(){
     $('.modal-trigger').leanModal();
-	$('#scoring-modal').openModal();
+	// $('#scoring-modal').openModal();
 }
 
-function go_to_tab(tab, isScroll){
-   if (typeof(isScroll)==='undefined') { isScroll = true; }
+// function go_to_tab(tab, isScroll){
+//    if (typeof(isScroll)==='undefined') { isScroll = true; }
 
-	$('section').addClass('hide');
-	$(tab).removeClass('hide');
+// 	$('section').addClass('hide');
+// 	$(tab).removeClass('hide');
 
-	if(isScroll){
-		$(tab).find('h1').next().next().scrollintoview({
-		    duration: 1700,
-		    direction: "vertical"
-		});		
-	}
-}
+// 	if(isScroll){
+// 		$(tab).find('h1').next().next().scrollintoview({
+// 		    duration: 1700,
+// 		    direction: "vertical"
+// 		});		
+// 	}
+// }
 
 function initialize_footer(){
 	var cities = ["sydney", "tokyo", "amsterdam", "london", "paris", "madrid", "nyc", "chicago", "stockholm", "copenhagen", "berlin", "sanfrancisco", "shanghai", "beijing", "istanbul", "mumbai", "cairo", "seoul", "bangkok", "tehran", "baghdad", "pyongyang"];

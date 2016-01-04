@@ -19,7 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="index.css" />
 	<style>
 		html { 
-			background: url(img/city.jpg) no-repeat center center fixed; 
+			/*background: url(img/stockholm.jpg) no-repeat center center fixed; */
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
@@ -48,7 +48,14 @@
 			margin-left:-20px;
 			padding-left:0px;
 		}
-
+		.splash-text{
+			/*background: url(img/city.jpg);*/
+			background: none;
+			padding:10px !important;
+		}
+		#current-games{
+			background: url(img/stockholm.jpg);
+		}
 		.splash-text > *{
 			padding:20px !important;
 		}
@@ -68,7 +75,7 @@
 <body>
 	<div class='row left-align splash-text' id='current-games'>
 	</div>
-	<div class='row left-align splash-text hide-on-small-only' id='old-games'>
+	<div class='row left-align hide-on-small-only' id='old-games'>
 	</div>
 </body>
 
@@ -93,11 +100,9 @@
 <script type='text/template' id='old_games_template'>
 	<h6 class='white grey-text'>Past Games:</h5>
 	<% for(var i = 0; i < before.length; i++) { %>
-		<h6 class='city-link white'>
-			<a class='blue-text text-lighten-3' style='pointer-events: all;' href='<%=before[i].url%>'> 
-				<%=before[i].name%> 
-			</a>
-		</h6>
+		<a class='blue-text text-lighten-3' style='pointer-events: all;' href='<%=before[i].url%>'> 
+			<%=before[i].name%> 
+		</a>
 	<% } %>
 </script>
 
